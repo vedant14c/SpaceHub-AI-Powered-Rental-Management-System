@@ -14,7 +14,7 @@ import org.springframework.beans.factory.annotation.Value;
 import org.springframework.stereotype.Service;
 
 import com.officespace.daos.PropertyDao;
-import com.officespace.dtos.SmartSearchFilters;
+import com.officespace.dtos.SmartSearchRequest;
 import com.officespace.entities.Property;
 
 @Service
@@ -33,11 +33,11 @@ public class SmartSearchServiceImpl {
     }
 
     public List<Property> search(String query) {
-        SmartSearchFilters filters = extractFilters(query);
+        SmartSearchRequest filters = extractFilters(query);
         return applyFilters(filters);
     }
 
-    private SmartSearchFilters extractFilters(String query) {
+    private SmartSearchRequest extractFilters(String query) {
         String prompt =
             "Extract search filters from this property search query as JSON only, " +
             "no explanation, no markdown. Fields: city (string or null), " +
@@ -110,7 +110,7 @@ public class SmartSearchServiceImpl {
 
             JSONObject filtersJson = new JSONObject(text);
 
-            SmartSearchFilters filters = new SmartSearchFilters();
+            SmartSearchRequest filters = new SmartSearchRequest();
             filters.setCity(filtersJson.optString("city", null));
             filters.setPropertyType(filtersJson.optString("propertyType", null));
             
@@ -160,11 +160,11 @@ public class SmartSearchServiceImpl {
             return filters;
             
         } catch (Exception e) {
-            return new SmartSearchFilters();
+            return new SmartSearchRequest();
         }
     }
 
-    private List<Property> applyFilters(SmartSearchFilters filters) {
+    private List<Property> applyFilters(SmartSearchRequest filters) {
         List<Property> approvedProperties = propertyDao.findAll().stream()
             .filter(p -> Boolean.TRUE.equals(p.getIsApproved()))
             .collect(Collectors.toList());
