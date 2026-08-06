@@ -7,8 +7,7 @@ import {
   FiSearch,
 } from "react-icons/fi";
 import OfficeCard from "../components/OfficeCard";
-import { getApprovedProperties } from "../services/propertyService";
-import "../css/office.css";
+import { getApprovedProperties, smartSearch, } from "../services/propertyService"; import "../css/office.css";
 
 function OfficeList() {
   const [searchParams] = useSearchParams();
@@ -35,22 +34,10 @@ function OfficeList() {
           setOffices(response);
         }
       } catch (requestError) {
-        console.error(
-          "Unable to load properties:",
-          requestError
-        );
+        console.error(requestError);
 
         if (componentActive) {
-          if (!requestError.response) {
-            setError(
-              "Cannot connect to the backend. Make sure Spring Boot is running."
-            );
-          } else {
-            setError(
-              requestError.response?.data?.message ||
-                "Unable to load rental properties."
-            );
-          }
+          setError("Unable to load properties.");
         }
       } finally {
         if (componentActive) {
@@ -66,28 +53,37 @@ function OfficeList() {
     };
   }, []);
 
-  const filteredOffices = offices.filter((office) => {
-    const searchText = search.trim().toLowerCase();
 
-    const matchesSearch =
-      !searchText ||
-      office.name?.toLowerCase().includes(searchText) ||
-      office.city?.toLowerCase().includes(searchText) ||
-      office.address?.toLowerCase().includes(searchText) ||
-      office.description?.toLowerCase().includes(searchText) ||
-      office.type?.toLowerCase().includes(searchText) ||
-      office.propertyType?.toLowerCase().includes(searchText);
+  const filteredOffices = offices;
 
-    const matchesType =
-      propertyType === "All" ||
-      propertyType === "All Properties" ||
-      String(office.type || "").toLowerCase() === propertyType.toLowerCase() ||
-      String(office.propertyType || "").toLowerCase() === propertyType.toLowerCase();
+  const handleAISearch = async () => {
+    console.log("Button Clicked");
+    console.log("Search =", search);
 
-    return matchesSearch && matchesType;
-  });
 
+    try {
+      setLoading(true);
+      setError("");
+
+      const query = [
+        search,
+        propertyType !== "All" ? propertyType : ""
+      ]
+        .filter(Boolean)
+        .join(" ");
+
+      const response = await smartSearch(query);
+
+      setOffices(response);
+    } catch (err) {
+      console.error(err);
+      setError("Unable to perform AI Search.");
+    } finally {
+      setLoading(false);
+    }
+  };
   return (
+
     <main className="office-page">
       <section className="office-page-header">
         <div className="container">
@@ -104,18 +100,33 @@ function OfficeList() {
       </section>
 
       <section className="container office-content">
-        <div className="office-filters">
+
+        <form
+          className="office-filters"
+          onSubmit={(event) => {
+            event.preventDefault();
+            handleAISearch();
+          }}
+        >
+
           <div className="filter-search">
             <FiSearch />
 
             <input
               type="text"
-              placeholder="Search by property name, type, or location..."
+              placeholder="Try: office for rent in Pune under 60000"
               value={search}
-              onChange={(event) =>
-                setSearch(event.target.value)
-              }
+              onChange={(event) => setSearch(event.target.value)}
             />
+
+            <button
+              type="button"
+              className="search-button"
+              onClick={handleAISearch}
+            >
+              <FiSearch />
+              AI Search
+            </button>
           </div>
 
           <select
@@ -144,7 +155,8 @@ function OfficeList() {
               Villa
             </option>
           </select>
-        </div>
+
+        </form>
 
         <div className="office-results-heading">
           <div>
@@ -183,9 +195,7 @@ function OfficeList() {
           <div className="no-offices">
             <FiSearch />
             <h3>No properties found</h3>
-            <p>
-              Try another location or property type.
-            </p>
+            <p>Try another location or property type.</p>
           </div>
         )}
       </section>

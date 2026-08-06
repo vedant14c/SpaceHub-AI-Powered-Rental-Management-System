@@ -19,29 +19,15 @@ function Home() {
   const handleSearch = (event) => {
     event.preventDefault();
 
-    const searchParameters = new URLSearchParams();
+    const query = [location, propertyType]
+      .filter(Boolean)
+      .join(" ");
 
-    if (location.trim()) {
-      searchParameters.set(
-        "search",
-        location.trim()
-      );
-    }
-
-    if (propertyType) {
-      searchParameters.set(
-        "type",
-        propertyType
-      );
-    }
-
-    const queryString = searchParameters.toString();
-
-    navigate(
-      queryString
-        ? `/offices?${queryString}`
-        : "/offices"
-    );
+    navigate("/offices", {
+      state: {
+        aiQuery: query
+      }
+    });
   };
 
   return (

@@ -71,13 +71,17 @@ public class SmartSearchServiceImpl {
             HttpClient client = HttpClient.newHttpClient();
             
             System.out.println("================================");
-            System.out.println("API URL : " + apiUrl);
-            System.out.println("API KEY : " + apiKey);
+            System.out.println("API URL = '" + apiUrl + "'");
+            System.out.println("API KEY = '" + apiKey + "'");
             System.out.println("================================");
             
             
+            String url = apiUrl.trim() + "?key=" + apiKey.trim();
+
+            System.out.println("FINAL URL = '" + url + "'");
+
             HttpRequest request = HttpRequest.newBuilder()
-                .uri(URI.create(apiUrl + "?key=" + apiKey))
+                .uri(URI.create(url))
                 .header("Content-Type", "application/json")
                 .POST(HttpRequest.BodyPublishers.ofString(
                     requestBody.toString(), StandardCharsets.UTF_8))
@@ -101,13 +105,17 @@ public class SmartSearchServiceImpl {
 
             JSONObject responseJson = new JSONObject(response.body());
             String text = responseJson
-                .getJSONArray("candidates")
-                .getJSONObject(0)
-                .getJSONObject("content")
-                .getJSONArray("parts")
-                .getJSONObject(0)
-                .getString("text");
-
+            	    .getJSONArray("candidates")
+            	    .getJSONObject(0)
+            	    .getJSONObject("content")
+            	    .getJSONArray("parts")
+            	    .getJSONObject(0)
+            	    .getString("text")
+            	    .trim();
+            	
+            System.out.println("Gemini JSON:");
+            System.out.println(text);
+            
             JSONObject filtersJson = new JSONObject(text);
 
             SmartSearchRequest filters = new SmartSearchRequest();
@@ -160,71 +168,59 @@ public class SmartSearchServiceImpl {
             return filters;
             
         } catch (Exception e) {
-            return new SmartSearchRequest();
+            e.printStackTrace();
+            throw new RuntimeException("Unable to parse Gemini response", e);
         }
     }
 
     private List<Property> applyFilters(SmartSearchRequest filters) {
+
+        System.out.println("========== APPLY FILTERS ==========");
+        System.out.println("City = " + filters.getCity());
+        System.out.println("Type = " + filters.getPropertyType());
+        System.out.println("Listing = " + filters.getListingType());
+        System.out.println("Price = " + filters.getMaxPrice());
+        System.out.println("===================================");
+
         List<Property> approvedProperties = propertyDao.findAll().stream()
-            .filter(p -> Boolean.TRUE.equals(p.getIsApproved()))
-            .collect(Collectors.toList());
+                .filter(p -> Boolean.TRUE.equals(p.getIsApproved()))
+                .collect(Collectors.toList());
 
-        return approvedProperties.stream()
+        List<Property> result = approvedProperties.stream()
 
-        	    .peek(p -> System.out.println("Checking : " +
-        	            p.getCity() + " | " +
-        	            p.getPropertyType() + " | " +
-        	            p.getListingType() + " | " +
-        	            p.getPrice()))
+                .peek(p -> System.out.println("Checking : " +
+                        p.getCity() + " | " +
+                        p.getPropertyType() + " | " +
+                        p.getListingType() + " | " +
+                        p.getPrice()))
 
-        	    .filter(p -> {
-        	        boolean match =
-        	                (filters.getCity() == null ||
-        	                        p.getCity().equalsIgnoreCase(filters.getCity()))
-        	                &&
-        	                (filters.getPropertyType() == null ||
-        	                        p.getPropertyType().equalsIgnoreCase(filters.getPropertyType()))
-        	                &&
-        	                (filters.getListingType() == null ||
-        	                        p.getListingType().equalsIgnoreCase(filters.getListingType()))
-        	                &&
-        	                (filters.getMaxPrice() == null ||
-        	                        p.getPrice() <= filters.getMaxPrice());
+                .filter(p -> {
+                    boolean match =
+                            (filters.getCity() == null ||
+                                    p.getCity().equalsIgnoreCase(filters.getCity()))
+                            &&
+                            (filters.getPropertyType() == null ||
+                                    p.getPropertyType().equalsIgnoreCase(filters.getPropertyType()))
+                            &&
+                            (filters.getListingType() == null ||
+                                    p.getListingType().equalsIgnoreCase(filters.getListingType()))
+                            &&
+                            (filters.getMaxPrice() == null ||
+                                    p.getPrice() <= filters.getMaxPrice());
 
-        	        System.out.println("MATCH = " + match);
+                    System.out.println("MATCH = " + match);
 
-        	        return match;
-        	    })
+                    return match;
+                })
 
-        	    .collect(Collectors.toList());
-//        return approvedProperties.stream()
-//
-//        	    .peek(p -> System.out.println(
-//        	        p.getCity() + " | " +
-//        	        p.getPropertyType() + " | " +
-//        	        p.getListingType() + " | " +
-//        	        p.getPrice()))
-//
-//        	    .filter(p -> filters.getCity() == null ||
-//        	        (p.getCity() != null &&
-//        	            p.getCity().toLowerCase().contains(filters.getCity().toLowerCase())))
-//
-//        	    .filter(p -> filters.getPropertyType() == null ||
-//        	        (p.getPropertyType() != null &&
-//        	            p.getPropertyType().equalsIgnoreCase(filters.getPropertyType())))
-//
-//        	    .filter(p -> filters.getListingType() == null ||
-//        	        (p.getListingType() != null &&
-//        	            p.getListingType().equalsIgnoreCase(filters.getListingType())))
-//
-//        	    .filter(p -> filters.getMaxPrice() == null ||
-//        	        (p.getPrice() != null &&
-//        	            p.getPrice() <= filters.getMaxPrice()))
-//
-//        	    .filter(p -> filters.getMinArea() == null ||
-//        	        (p.getAreaSqft() != null &&
-//        	            p.getAreaSqft() >= filters.getMinArea()))
-//
-//        	    .collect(Collectors.toList());
+                .collect(Collectors.toList());
+
+        System.out.println("RESULT SIZE = " + result.size());
+
+        for (Property p : result) {
+            System.out.println("RESULT -> " + p.getTitle());
+        }
+
+        return result;
     }
 }
