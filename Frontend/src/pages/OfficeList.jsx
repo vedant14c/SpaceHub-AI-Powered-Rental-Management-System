@@ -7,8 +7,13 @@ import {
   FiSearch,
 } from "react-icons/fi";
 import OfficeCard from "../components/OfficeCard";
-import { getApprovedProperties } from "../services/propertyService";
+import {
+  getApprovedProperties,
+  smartSearch,
+} from "../services/propertyService";
 import "../css/office.css";
+import { BsStars } from "react-icons/bs";
+
 
 function OfficeList() {
   const [searchParams] = useSearchParams();
@@ -48,7 +53,7 @@ function OfficeList() {
           } else {
             setError(
               requestError.response?.data?.message ||
-                "Unable to load rental properties."
+              "Unable to load rental properties."
             );
           }
         }
@@ -67,26 +72,30 @@ function OfficeList() {
   }, []);
 
   const filteredOffices = offices.filter((office) => {
-    const searchText = search.trim().toLowerCase();
-
-    const matchesSearch =
-      !searchText ||
-      office.name?.toLowerCase().includes(searchText) ||
-      office.city?.toLowerCase().includes(searchText) ||
-      office.address?.toLowerCase().includes(searchText) ||
-      office.description?.toLowerCase().includes(searchText) ||
-      office.type?.toLowerCase().includes(searchText) ||
-      office.propertyType?.toLowerCase().includes(searchText);
-
-    const matchesType =
+    return (
       propertyType === "All" ||
-      propertyType === "All Properties" ||
-      String(office.type || "").toLowerCase() === propertyType.toLowerCase() ||
-      String(office.propertyType || "").toLowerCase() === propertyType.toLowerCase();
-
-    return matchesSearch && matchesType;
+      String(office.type || "").toLowerCase() === propertyType.toLowerCase()
+    );
   });
 
+  const handleAISearch = async (event) => {
+    if (event) {
+      event.preventDefault();
+    }
+    try {
+      setLoading(true);
+      setError("");
+
+      const response = await smartSearch(search);
+
+      setOffices(response);
+    } catch (err) {
+      console.error(err);
+      setError("Unable to perform AI Search.");
+    } finally {
+      setLoading(false);
+    }
+  };
   return (
     <main className="office-page">
       <section className="office-page-header">
@@ -105,18 +114,30 @@ function OfficeList() {
 
       <section className="container office-content">
         <div className="office-filters">
-          <div className="filter-search">
-            <FiSearch />
+          <form className="filter-search" onSubmit={handleAISearch}>
+
+            <FiSearch className="search-icon" />
 
             <input
               type="text"
-              placeholder="Search by property name, type, or location..."
+              placeholder="Try: office for rent in Pune under ₹60,000"
               value={search}
-              onChange={(event) =>
-                setSearch(event.target.value)
-              }
+              onChange={(event) => setSearch(event.target.value)}
             />
-          </div>
+
+            <div className="ai-badge">
+              <BsStars />
+              <span>AI</span>
+            </div>
+
+            <button
+              type="submit"
+              className="search-button"
+            >
+              Search
+            </button>
+
+          </form>
 
           <select
             value={propertyType}

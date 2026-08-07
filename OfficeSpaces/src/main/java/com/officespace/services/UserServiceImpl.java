@@ -2,6 +2,12 @@ package com.officespace.services;
 
 import java.time.LocalDateTime;
 
+import java.time.LocalDateTime;
+import java.util.UUID;
+
+
+import com.officespace.dtos.ForgotPasswordRequestDTO;
+import com.officespace.dtos.ResetPasswordRequestDTO;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.security.crypto.password.PasswordEncoder;
 import org.springframework.stereotype.Service;
@@ -22,7 +28,8 @@ public class UserServiceImpl {
 	private UserDao userDao;
 	@Autowired
 	private JwtService jwtService;
-
+	@Autowired
+	private EmailServiceImpl emailService;
 
 	public String register(User user) {
 		if (userDao.findByEmail(user.getEmail()) != null)
@@ -62,6 +69,102 @@ public class UserServiceImpl {
 		response.setMessage("Invalid Email or Password");
 		return response;
 	}
+	
+//	public String forgotPassword(ForgotPasswordRequestDTO request) {
+//
+//	    User user = userDao.findByEmail(request.getEmail());
+//
+//	    // Always return success (security)
+//	    if (user == null) {
+//	        return "If the email exists, a reset link has been sent.";
+//	    }
+//
+//	    String token = UUID.randomUUID().toString();
+//
+//	    user.setResetToken(token);
+//	    user.setResetTokenExpiry(LocalDateTime.now().plusMinutes(15));
+//
+//	    userDao.save(user);
+//
+//	    String link =
+//	            "http://localhost:5173/reset-password?token=" + token;
+//
+//	    emailService.sendEmail(
+//	            user.getEmail(),
+//	            "Password Reset",
+//	            "Click the link below to reset your password:\n\n" + link
+//	    );
+//
+//	    return "If the email exists, a reset link has been sent.";
+//	}
+	
+	public String forgotPassword(ForgotPasswordRequestDTO request) {
+
+	    System.out.println("========== FORGOT PASSWORD ==========");
+	    System.out.println("Email Received = " + request.getEmail());
+
+	    User user = userDao.findByEmail(request.getEmail());
+
+	    System.out.println("User Found = " + user);
+
+	    if (user == null) {
+	        System.out.println("No user found.");
+	        return "If the email exists, a reset link has been sent.";
+	    }
+
+	    String token = UUID.randomUUID().toString();
+
+	    System.out.println("Generated Token = " + token);
+
+	    user.setResetToken(token);
+	    user.setResetTokenExpiry(LocalDateTime.now().plusMinutes(15));
+
+	    userDao.save(user);
+
+	    System.out.println("Token saved in database.");
+
+	    String link =
+	            "http://localhost:5173/reset-password?token=" + token;
+
+	    System.out.println("Reset Link = " + link);
+
+	    System.out.println("Sending email...");
+
+	    emailService.sendEmail(
+	            user.getEmail(),
+	            "Password Reset",
+	            "Click the link below to reset your password:\n\n" + link
+	    );
+
+	    System.out.println("Email sent successfully.");
+	    System.out.println("====================================");
+
+	    return "If the email exists, a reset link has been sent.";
+	}
+	public String resetPassword(ResetPasswordRequestDTO request) {
+
+	    User user = userDao.findByResetToken(request.getToken());
+
+	    if (user == null) {
+	        return "Invalid reset token.";
+	    }
+
+	    if (user.getResetTokenExpiry().isBefore(LocalDateTime.now())) {
+	        return "Reset link has expired.";
+	    }
+
+	    user.setPassword(
+	            passwordEncoder.encode(request.getNewPassword())
+	    );
+
+	    user.setResetToken(null);
+	    user.setResetTokenExpiry(null);
+
+	    userDao.save(user);
+
+	    return "Password changed successfully.";
+	}
+	
 	public User activateUser(int id) {
 
 	    User user = userDao.findById(id).orElseThrow();

@@ -73,7 +73,7 @@ function Login() {
       if (!response?.token) {
         setError(
           response?.message ||
-            "Invalid email or password."
+          "Invalid email or password."
         );
         return;
       }
@@ -161,7 +161,7 @@ function Login() {
       } else {
         setError(
           loginError.response.data?.message ||
-            "Login failed. Please try again."
+          "Login failed. Please try again."
         );
       }
     } finally {
@@ -314,12 +314,12 @@ function Login() {
                 <span>Remember me</span>
               </label>
 
-              <button
-                type="button"
+              <Link
+                to="/forgot-password"
                 className="forgot-password"
               >
                 Forgot password?
-              </button>
+              </Link>
             </div>
 
             <button

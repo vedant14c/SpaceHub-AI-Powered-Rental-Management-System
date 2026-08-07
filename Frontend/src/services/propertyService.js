@@ -280,3 +280,16 @@ export const uploadPropertyImages = async (
 
   return response.data;
 };
+
+export const smartSearch = async (query) => {
+  console.log("SMART SEARCH CALLED");
+  console.log("Query =", query);
+
+  const response = await API.post("/search/smart", {
+    query,
+  });
+
+  console.log("Backend Response =", response.data);
+
+  return normalizeProperties(response.data);
+};

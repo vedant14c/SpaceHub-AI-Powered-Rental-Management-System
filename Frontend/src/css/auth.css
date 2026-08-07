@@ -27,17 +27,13 @@
   overflow: hidden;
 
   background:
-    radial-gradient(
-      circle at 20% 20%,
+    radial-gradient(circle at 20% 20%,
       rgba(75, 105, 255, 0.25),
-      transparent 35%
-    ),
-    linear-gradient(
-      145deg,
+      transparent 35%),
+    linear-gradient(145deg,
       #071a3c 0%,
       #0b2148 50%,
-      #102b5e 100%
-    );
+      #102b5e 100%);
 
   color: #ffffff;
 }
@@ -92,11 +88,9 @@
 
   color: #ffffff;
 
-  background: linear-gradient(
-    135deg,
-    #3478f6,
-    #6258ed
-  );
+  background: linear-gradient(135deg,
+      #3478f6,
+      #6258ed);
 }
 
 .auth-logo strong {
@@ -133,7 +127,7 @@
   font-weight: 750;
 }
 
-.auth-message > p:not(.auth-label) {
+.auth-message>p:not(.auth-label) {
   margin: 0;
 
   max-width: 520px;
@@ -215,7 +209,7 @@
   margin-bottom: 32px;
 }
 
-.auth-form-heading > p {
+.auth-form-heading>p {
   margin: 0 0 10px;
 
   color: #4267e8;
@@ -368,7 +362,7 @@
     0 0 0 3px rgba(79, 111, 255, 0.12);
 }
 
-.auth-input > svg {
+.auth-input>svg {
   flex-shrink: 0;
 
   color: #8b98aa;
@@ -498,11 +492,9 @@
   border: 0;
   border-radius: 11px;
 
-  background: linear-gradient(
-    135deg,
-    #326ff0,
-    #5b58ec
-  );
+  background: linear-gradient(135deg,
+      #326ff0,
+      #5b58ec);
 
   color: #ffffff;
 
@@ -645,4 +637,59 @@
   .auth-form-heading h2 {
     font-size: 29px;
   }
+}
+
+/* ==========================
+   FORGOT PASSWORD
+========================== */
+
+.forgot-password-page {
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: #f5f7fb;
+  padding: 40px 20px;
+}
+
+.forgot-password-card {
+  width: 100%;
+  max-width: 450px;
+  background: #fff;
+  border-radius: 16px;
+  padding: 35px;
+  box-shadow: 0 15px 40px rgba(15, 23, 42, 0.12);
+}
+
+.forgot-password-card h2 {
+  margin-bottom: 10px;
+  text-align: center;
+}
+
+.forgot-password-card p {
+  color: #64748b;
+  text-align: center;
+  margin-bottom: 25px;
+}
+
+.forgot-success {
+  margin-top: 20px;
+  padding: 12px;
+  border-radius: 8px;
+  background: #dcfce7;
+  color: #166534;
+  text-align: center;
+}
+
+.back-login {
+  display: block;
+  margin-top: 20px;
+  text-align: center;
+  color: #2563eb;
+  font-weight: 600;
+  text-decoration: none;
+}
+
+.back-login:hover {
+  text-decoration: underline;
 }

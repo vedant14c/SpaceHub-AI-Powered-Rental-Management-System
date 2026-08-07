@@ -33,7 +33,10 @@
 	</properties>
 	<dependencies>
 
-		
+		<dependency>
+    <groupId>org.springframework.boot</groupId>
+    <artifactId>spring-boot-starter-mail</artifactId>
+</dependency>
 
 		<!-- Source: https://mvnrepository.com/artifact/com.razorpay/razorpay-java -->
 	<dependency>

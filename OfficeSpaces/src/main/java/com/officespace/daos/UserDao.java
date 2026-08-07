@@ -9,4 +9,7 @@ public interface UserDao extends JpaRepository<User,Integer>{
 	User findByEmail(String email);
 	 long countByRole(Role role);
 	    long countByRoleAndIsActive(Role role, Boolean isActive);
+	    
+	    User findByResetToken(String resetToken);
+
 }

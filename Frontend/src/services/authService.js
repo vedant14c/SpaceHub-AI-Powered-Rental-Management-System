@@ -38,3 +38,20 @@ export const logoutUser = () => {
   localStorage.removeItem("name");
   localStorage.removeItem("role");
 };
+
+export const forgotPassword = async (email) => {
+  const response = await API.post("/forgot-password", {
+    email,
+  });
+
+  return response.data;
+};
+
+export const resetPassword = async (token, newPassword) => {
+  const response = await API.post("/reset-password", {
+    token,
+    newPassword,
+  });
+
+  return response.data;
+};

@@ -60,6 +60,13 @@ public class User implements UserDetails {
 	private String preferredListingType;
 
 	private Double maxBudget;
+	
+	@Column(name = "reset_token")
+	private String resetToken;
+
+	@Column(name = "reset_token_expiry")
+	private LocalDateTime resetTokenExpiry;
+	
 	@Override
 	public Collection<? extends GrantedAuthority> getAuthorities() {
 		return List.of(new SimpleGrantedAuthority("ROLE_" + role));
@@ -90,4 +97,5 @@ public class User implements UserDetails {
 		return isActive == null || Boolean.TRUE.equals(isActive);
 	}
 
+	
 }

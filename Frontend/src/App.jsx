@@ -23,6 +23,8 @@ import EditProperty from "./pages/EditProperty";
 import AdminDashboard from "./pages/AdminDashboard";
 import AdminUsers from "./pages/AdminUsers";
 import AdminBookings from "./pages/AdminBookings";
+import ForgotPassword from "./pages/ForgotPassword";
+import ResetPassword from "./pages/ResetPassword";
 
 import "./App.css";
 
@@ -36,6 +38,14 @@ function App() {
 
         <Route path="/" element={<Home />} />
 
+        <Route
+          path="/reset-password"
+          element={<ResetPassword />}
+        />
+        <Route
+          path="/forgot-password"
+          element={<ForgotPassword />}
+        />
         <Route
           path="/offices"
           element={<OfficeList />}
