@@ -1,0 +1,18 @@
+package com.myapplication.office_spaces.models;
+
+public class SmartSearchRequest {
+
+    private String query;
+
+    public SmartSearchRequest(String query) {
+        this.query = query;
+    }
+
+    public String getQuery() {
+        return query;
+    }
+
+    public void setQuery(String query) {
+        this.query = query;
+    }
+}

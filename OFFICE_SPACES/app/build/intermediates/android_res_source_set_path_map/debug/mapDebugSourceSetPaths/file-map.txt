@@ -1,0 +1,8 @@
+com.myapplication.office_spaces.app-pngs-0 D:\OfficeSpaceProject\OFFICE_SPACES\app\build\generated\res\pngs\debug
+com.myapplication.office_spaces.app-updated_navigation_xml-1 D:\OfficeSpaceProject\OFFICE_SPACES\app\build\generated\updated_navigation_xml\debug
+com.myapplication.office_spaces.app-packageDebugResources-2 D:\OfficeSpaceProject\OFFICE_SPACES\app\build\intermediates\incremental\debug\packageDebugResources\merged.dir
+com.myapplication.office_spaces.app-packageDebugResources-3 D:\OfficeSpaceProject\OFFICE_SPACES\app\build\intermediates\incremental\debug\packageDebugResources\stripped.dir
+com.myapplication.office_spaces.app-debug-4 D:\OfficeSpaceProject\OFFICE_SPACES\app\build\intermediates\merged_res\debug\mergeDebugResources
+com.myapplication.office_spaces.app-debug-5 D:\OfficeSpaceProject\OFFICE_SPACES\app\src\debug\res
+com.myapplication.office_spaces.app-main-6 D:\OfficeSpaceProject\OFFICE_SPACES\app\src\main\res
+gradleHome-0 C:\Users\AsmitaM\.gradle

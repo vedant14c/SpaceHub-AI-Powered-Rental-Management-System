@@ -1,0 +1,26 @@
+{
+    "logs": [
+        {
+            "outputFile": "com.myapplication.office_spaces.app-mergeDebugResources-46:/values-en-rSG/values-en-rSG.xml",
+            "map": [
+                {
+                    "source": "C:\\Users\\AsmitaM\\.gradle\\caches\\9.4.1\\transforms\\a7f1dcfa59bed9b2e1582ae2819497dc\\transformed\\play-services-wallet-18.1.3\\res\\values-en-rSG\\values.xml",
+                    "from": {
+                        "startLines": "4",
+                        "startColumns": "0",
+                        "startOffsets": "206",
+                        "endColumns": "70",
+                        "endOffsets": "276"
+                    },
+                    "to": {
+                        "startLines": "2",
+                        "startColumns": "4",
+                        "startOffsets": "55",
+                        "endColumns": "74",
+                        "endOffsets": "125"
+                    }
+                }
+            ]
+        }
+    ]
+}
