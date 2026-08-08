@@ -70,33 +70,7 @@ public class UserServiceImpl {
 		return response;
 	}
 	
-//	public String forgotPassword(ForgotPasswordRequestDTO request) {
-//
-//	    User user = userDao.findByEmail(request.getEmail());
-//
-//	    // Always return success (security)
-//	    if (user == null) {
-//	        return "If the email exists, a reset link has been sent.";
-//	    }
-//
-//	    String token = UUID.randomUUID().toString();
-//
-//	    user.setResetToken(token);
-//	    user.setResetTokenExpiry(LocalDateTime.now().plusMinutes(15));
-//
-//	    userDao.save(user);
-//
-//	    String link =
-//	            "http://localhost:5173/reset-password?token=" + token;
-//
-//	    emailService.sendEmail(
-//	            user.getEmail(),
-//	            "Password Reset",
-//	            "Click the link below to reset your password:\n\n" + link
-//	    );
-//
-//	    return "If the email exists, a reset link has been sent.";
-//	}
+
 	
 	public String forgotPassword(ForgotPasswordRequestDTO request) {
 
@@ -183,5 +157,18 @@ public class UserServiceImpl {
 	    User user = userDao.findById(id).orElseThrow();
 	    user.setRole(role);
 	    return userDao.save(user);
+	}
+	
+	public void updateFcmToken(String email, String token) {
+
+	    User user = userDao.findByEmail(email);
+
+	    if (user == null) {
+	        throw new RuntimeException("User not found");
+	    }
+
+	    user.setFcmToken(token);
+
+	    userDao.save(user);
 	}
 }
