@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <array name="default_price_values">
+        <item>10000.0</item>
+        <item>500000.0</item>
+    </array>
+    <array name="default_area_values">
+        <item>500.0</item>
+        <item>10000.0</item>
+    </array>
+    <string-array name="property_types">
+        <item>All Types</item>
+        <item>Private Office</item>
+        <item>Coworking</item>
+        <item>Meeting Room</item>
+        <item>Virtual Office</item>
+    </string-array>
+    <string-array name="cities">
+        <item>Mumbai, India</item>
+        <item>Pune, India</item>
+        <item>Bengaluru, India</item>
+        <item>Delhi, India</item>
+        <item>Hyderabad, India</item>
+    </string-array>
+
+    <string-array name="booking_durations">
+        <item>1 Day</item>
+        <item>1 Week</item>
+        <item>1 Month</item>
+        <item>3 Months</item>
+        <item>6 Months</item>
+        <item>1 Year</item>
+    </string-array>
+    <string-array name="listing_types_owner">
+        <item>Rent</item>
+    </string-array>
+
+    <string-array name="price_units">
+        <item>month</item>
+        <item>year</item>
+        <item>total</item>
+    </string-array>
+
+
+</resources>

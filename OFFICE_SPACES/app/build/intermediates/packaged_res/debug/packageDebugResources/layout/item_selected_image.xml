@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="80dp"
+    android:layout_height="80dp"
+    android:layout_marginEnd="10dp">
+
+    <ImageView
+        android:id="@+id/imgThumbnail"
+        android:layout_width="80dp"
+        android:layout_height="80dp"
+        android:scaleType="centerCrop"
+        android:background="@color/lightBlue"/>
+
+    <ImageView
+        android:id="@+id/btnRemove"
+        android:layout_width="22dp"
+        android:layout_height="22dp"
+        android:layout_gravity="top|end"
+        android:background="@drawable/bg_step_circle_active"
+        android:padding="4dp"
+        android:src="@drawable/ic_close_small"/>
+
+</FrameLayout>
