@@ -1,0 +1,17 @@
+DB_URL=jdbc:mysql://localhost:3306/officespacesdb
+DB_USERNAME=root
+DB_PASSWORD=manager
+
+JWT_SECRET_KEY=b2ZmaWNlc3BhY2Vfc2VjcmV0X2tleV9tdXN0X2JlXzMyX2NoYXJzISE=
+JWT_EXPIRATION_TIME=86400000
+
+GEMINI_API_KEY=AIzaSyCZUXgQPHOwGTtoZGfnDUBb5iqO1Wz3jV8	
+GEMINI_API_URL=https://generativelanguage.googleapis.com/v1beta/models/gemini-3.5-flash:generateContent
+
+RAZORPAY_KEY_ID=rzp_test_TIlQRwBqOgvXIf
+RAZORPAY_KEY_SECRET=1rwlCKTKxLs6uL3qmNj1INIR
+
+UPLOAD_DIR=src/main/resources/static/images/
+
+MAIL_USERNAME=2k18vedant@gmail.com
+MAIL_PASSWORD=unlmkmzehceqrjds
