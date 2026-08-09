@@ -45,5 +45,21 @@ public class NotificationController {
 
 		return notificationServiceImpl.markAsRead(id);
 	}
+	
+	@GetMapping("/test")
+	public String testNotification() {
+
+	    String token = "PASTE_YOUR_FCM_TOKEN";
+
+	    notificationServiceImpl.sendPushNotification(
+	            token,
+	            "Test Title",
+	            "Hello from backend",
+	            "TEST",
+	            "1"
+	    );
+
+	    return "Notification sent";
+	}
 
 }

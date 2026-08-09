@@ -50,34 +50,28 @@ public class NotificationServiceImpl {
 		return null;
 	}
 
-	public void sendPushNotification(
-	        String fcmToken,
-	        String title,
-	        String body) {
+	public void sendPushNotification(String fcmToken, String title, String body,
+            String type, String targetId) {
 
-	    try {
-
-	    	Message message = Message.builder()
-	    	        .setToken(fcmToken)
-	    	        .setNotification(
-	    	                com.google.firebase.messaging.Notification
-	    	                        .builder()
-	    	                        .setTitle(title)
-	    	                        .setBody(body)
-	    	                        .build())
-	    	        .build();
-
-	        String response =
-	                FirebaseMessaging.getInstance()
-	                        .send(message);
-
-	        System.out.println(response);
-
-	        
-	    } catch (Exception e) {
-
-	        e.printStackTrace();
-
-	    }
-	}
+					if (fcmToken == null || fcmToken.isEmpty()) return;
+					
+					try {
+					
+					Message message = Message.builder()
+					.setToken(fcmToken)
+					.putData("type", type)
+					.putData("targetId", targetId)
+					.setNotification(
+					   com.google.firebase.messaging.Notification.builder()
+					           .setTitle(title)
+					           .setBody(body)
+					           .build())
+					.build();
+					
+					FirebaseMessaging.getInstance().send(message);
+					
+					} catch (Exception e) {
+					e.printStackTrace();
+					}
+					}
 }
