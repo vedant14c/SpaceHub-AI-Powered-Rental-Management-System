@@ -41,6 +41,8 @@ const initialForm = {
   city: "",
   state: "Maharashtra",
   zipCode: "",
+  latitude: "",
+  longitude: "",
 };
 
 function getLoggedInUser() {
@@ -97,6 +99,28 @@ function AddProperty() {
     }
 
     setImageFiles(validFiles);
+  };
+
+  const handleGPSLocation = () => {
+    if ("geolocation" in navigator) {
+      navigator.geolocation.getCurrentPosition(
+        (position) => {
+          setFormData((prev) => ({
+            ...prev,
+            latitude: position.coords.latitude.toString(),
+            longitude: position.coords.longitude.toString(),
+          }));
+          setError("");
+        },
+        (error) => {
+          console.error("GPS error:", error);
+          setError("Unable to retrieve your location. Please ensure location access is allowed.");
+        },
+        { enableHighAccuracy: true, timeout: 5000, maximumAge: 0 }
+      );
+    } else {
+      setError("Geolocation is not supported by your browser.");
+    }
   };
 
   const handleSubmit = async (event) => {
@@ -158,8 +182,8 @@ function AddProperty() {
       state: formData.state.trim(),
       zipCode: formData.zipCode.trim(),
 
-      latitude: null,
-      longitude: null,
+      latitude: formData.latitude ? Number(formData.latitude) : null,
+      longitude: formData.longitude ? Number(formData.longitude) : null,
 
       status: "AVAILABLE",
       isApproved: false,
@@ -170,20 +194,22 @@ function AddProperty() {
       setError("");
       setImageWarning("");
 
-      try {
-        const coords = await geocodeAddress({
-          address: propertyPayload.address,
-          city: propertyPayload.city,
-          state: propertyPayload.state,
-          zipCode: propertyPayload.zipCode,
-        });
+      if (!propertyPayload.latitude || !propertyPayload.longitude) {
+        try {
+          const coords = await geocodeAddress({
+            address: propertyPayload.address,
+            city: propertyPayload.city,
+            state: propertyPayload.state,
+            zipCode: propertyPayload.zipCode,
+          });
 
-        if (coords) {
-          propertyPayload.latitude = coords.lat;
-          propertyPayload.longitude = coords.lng;
+          if (coords) {
+            propertyPayload.latitude = coords.lat;
+            propertyPayload.longitude = coords.lng;
+          }
+        } catch (geoErr) {
+          console.warn("Geocoding failed during creation, continuing without coordinates:", geoErr);
         }
-      } catch (geoErr) {
-        console.warn("Geocoding failed during creation, continuing without coordinates:", geoErr);
       }
 
       const createdProperty = await createProperty(propertyPayload);
@@ -355,6 +381,58 @@ function AddProperty() {
                     />
                   </div>
                 </label>
+              </div>
+            </div>
+
+            <div className="property-form-divider" />
+
+            <div className="property-form-section">
+              <div className="property-section-heading">
+                <span>
+                  <FiMapPin />
+                </span>
+                <div>
+                  <h2>Location Coordinates</h2>
+                  <p>Provide GPS coordinates for your property manually or automatically</p>
+                </div>
+              </div>
+              <div className="property-form-grid">
+                <label className="property-field">
+                  Latitude
+                  <input
+                    type="number"
+                    step="any"
+                    name="latitude"
+                    value={formData.latitude}
+                    onChange={handleChange}
+                    placeholder="e.g. 19.0760"
+                  />
+                </label>
+                <label className="property-field">
+                  Longitude
+                  <input
+                    type="number"
+                    step="any"
+                    name="longitude"
+                    value={formData.longitude}
+                    onChange={handleChange}
+                    placeholder="e.g. 72.8777"
+                  />
+                </label>
+                <div className="property-field property-full-width" style={{ marginTop: '10px' }}>
+                  <button 
+                    type="button" 
+                    className="property-secondary-button" 
+                    onClick={handleGPSLocation}
+                    style={{ width: 'fit-content' }}
+                  >
+                    <FiMapPin style={{ marginRight: '8px' }} />
+                    Get Current Location (GPS)
+                  </button>
+                  <small style={{ color: "#6a7892", display: "block", marginTop: "8px" }}>
+                    If left blank, coordinates will be auto-generated from the address.
+                  </small>
+                </div>
               </div>
             </div>
 
