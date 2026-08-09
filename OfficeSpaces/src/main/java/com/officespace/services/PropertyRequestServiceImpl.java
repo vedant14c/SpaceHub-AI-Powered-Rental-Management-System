@@ -35,17 +35,20 @@ public class PropertyRequestServiceImpl {
 	private final PropertyDao propertyDao;
 	private final NotificationDao notificationDao;
 	private final BookingValidationService validationService;
-
+	private final NotificationServiceImpl notificationServiceImpl;
+	
 	public PropertyRequestServiceImpl(UserDao userDao,
 	                                   PropertyRequestDao propertyRequestDao,
 	                                   PropertyDao propertyDao,
 	                                   NotificationDao notificationDao,
-	                                   BookingValidationService validationService) {
+	                                   BookingValidationService validationService,
+	                                   NotificationServiceImpl notificationServiceImpl) {
 		this.userDao = userDao;
 		this.propertyRequestDao = propertyRequestDao;
 		this.propertyDao = propertyDao;
 		this.notificationDao = notificationDao;
 		this.validationService = validationService;
+		this.notificationServiceImpl = notificationServiceImpl;
 	}
 
 	public List<BookedDateRangeDTO> getAvailability(Integer propertyId) {
@@ -94,7 +97,30 @@ public class PropertyRequestServiceImpl {
 		request.setReviewedAt(null);
 		request.setCreatedAt(LocalDateTime.now());
 
-		return propertyRequestDao.save(request);
+		request.setCreatedAt(LocalDateTime.now());
+
+		// ✅ SAVE FIRST
+		PropertyRequest savedRequest = propertyRequestDao.save(request);
+
+		// ✅ SEND NOTIFICATION TO OWNER
+		Property savedProperty = propertyDao.findById(savedRequest.getPropertyId()).orElse(null);
+		if (property != null) {
+		    User owner = userDao.findById(property.getOwnerId()).orElse(null);
+
+		    if (owner != null && owner.getFcmToken() != null) {
+
+		        notificationServiceImpl.sendPushNotification(
+		                owner.getFcmToken(),
+		                "New Booking Request",
+		                "You received a new booking request",
+		                "BOOKING",
+		                String.valueOf(savedRequest.getRequestId())
+		        );
+		    }
+		}
+
+	
+		return savedRequest;
 	}
 
 	public List<PropertyRequest> getAllRequests(RequestType type) {
@@ -162,6 +188,18 @@ public class PropertyRequestServiceImpl {
 		notification.setCreatedAt(LocalDateTime.now());
 		notificationDao.save(notification);
 
+		User user = userDao.findById(updatedRequest.getUserId()).orElse(null);
+
+		if (user != null && user.getFcmToken() != null) {
+
+		    notificationServiceImpl.sendPushNotification(
+		            user.getFcmToken(),
+		            "Request " + newStatus.name(),
+		            "Your request has been " + newStatus.name().toLowerCase(),
+		            "BOOKING",
+		            String.valueOf(updatedRequest.getRequestId())
+		    );
+		}
 		return updatedRequest;
 	}
 
