@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="@color/background"
+    android:padding="20dp">
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="More"
+        android:textStyle="bold"
+        android:textSize="22sp"
+        android:textColor="@color/textDark" />
+
+    <!-- Block Users -->
+    <LinearLayout
+        android:id="@+id/actionBlockUsers"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:gravity="center_vertical"
+        android:background="@drawable/bg_role_card"
+        android:padding="16dp"
+        android:layout_marginTop="20dp">
+
+        <ImageView
+            android:layout_width="22dp"
+            android:layout_height="22dp"
+            android:src="@drawable/ic_block"
+            android:contentDescription="Block Users" />
+
+        <TextView
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:layout_marginStart="12dp"
+            android:text="Block Users"
+            android:textSize="14sp"
+            android:textColor="@color/textDark" />
+
+        <ImageView
+            android:layout_width="18dp"
+            android:layout_height="18dp"
+            android:src="@drawable/ic_chevron_right"
+            android:contentDescription="Open" />
+
+    </LinearLayout>
+
+    <!-- Logout -->
+    <com.google.android.material.button.MaterialButton
+        android:id="@+id/btnLogout"
+        android:layout_width="match_parent"
+        android:layout_height="56dp"
+        android:layout_marginTop="30dp"
+        android:text="Logout"
+        android:textAllCaps="false"
+        android:textSize="16sp" />
+
+</LinearLayout>
