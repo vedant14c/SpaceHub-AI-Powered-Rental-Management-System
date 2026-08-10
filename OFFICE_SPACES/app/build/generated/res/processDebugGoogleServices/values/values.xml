@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="gcm_defaultSenderId" translatable="false">898477186786</string>
+    <string name="google_api_key" translatable="false">AIzaSyAZ6KUs8vNn5hgFFzSCTXEbDo0vQuIHS_I</string>
+    <string name="google_app_id" translatable="false">1:898477186786:android:f90bc10e3ac55f306b48bb</string>
+    <string name="google_crash_reporting_api_key" translatable="false">AIzaSyAZ6KUs8vNn5hgFFzSCTXEbDo0vQuIHS_I</string>
+    <string name="google_storage_bucket" translatable="false">spacehub-4087a.firebasestorage.app</string>
+    <string name="project_id" translatable="false">spacehub-4087a</string>
+</resources>
