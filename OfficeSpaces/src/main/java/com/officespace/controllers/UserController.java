@@ -24,6 +24,7 @@ import com.officespace.entities.MyProfileView;
 import com.officespace.entities.User;
 
 import org.springframework.http.HttpStatus;
+import org.springframework.http.ResponseEntity;
 import org.springframework.web.server.ResponseStatusException;
 
 @RestController
@@ -137,5 +138,28 @@ public class UserController {
     @PutMapping("/{id}/role")
     public User updateUserRole(@PathVariable int id, @RequestParam Role role) {
         return userService.updateUserRole(id, role);
+    }
+    
+    @PutMapping("/me/fcm-token")
+    public ResponseEntity<?> updateFcmToken(
+            @RequestParam String token,
+            Authentication authentication) {
+
+    	System.out.println("🔥 FCM API HIT");
+        System.out.println("Token = " + token);
+        
+        System.out.println("========== UPDATE FCM ==========");
+        System.out.println("Authentication = " + authentication);
+        System.out.println("Email = " + (authentication != null ? authentication.getName() : "NULL"));
+        System.out.println("Token = " + token);
+
+        if (authentication == null) {
+            return ResponseEntity.badRequest().body("Authentication is NULL");
+        }
+        String email = authentication.getName();
+
+        userService.updateFcmToken(authentication.getName(), token);
+
+        return ResponseEntity.ok("FCM Token Updated");
     }
 }

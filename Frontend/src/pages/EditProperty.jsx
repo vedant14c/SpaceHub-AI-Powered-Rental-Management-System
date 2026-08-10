@@ -41,6 +41,8 @@ const emptyForm = {
   city: "",
   state: "",
   zipCode: "",
+  latitude: "",
+  longitude: "",
 };
 
 function getCapacityFromDescription(description = "") {
@@ -144,6 +146,8 @@ function EditProperty() {
           city: property.city || "",
           state: property.state || "",
           zipCode: property.zipCode || "",
+          latitude: property.latitude ?? "",
+          longitude: property.longitude ?? "",
         });
       } catch (requestError) {
         console.error("Property loading error:", requestError);
@@ -201,6 +205,29 @@ function EditProperty() {
     setError("");
   };
 
+  const handleGPSLocation = () => {
+    if ("geolocation" in navigator) {
+      navigator.geolocation.getCurrentPosition(
+        (position) => {
+          setFormData((prev) => ({
+            ...prev,
+            latitude: position.coords.latitude.toString(),
+            longitude: position.coords.longitude.toString(),
+          }));
+          setError("");
+          setUpdated(false);
+        },
+        (error) => {
+          console.error("GPS error:", error);
+          setError("Unable to retrieve your location. Please ensure location access is allowed.");
+        },
+        { enableHighAccuracy: true, timeout: 5000, maximumAge: 0 }
+      );
+    } else {
+      setError("Geolocation is not supported by your browser.");
+    }
+  };
+
   const handleSubmit = async (event) => {
     event.preventDefault();
 
@@ -253,8 +280,8 @@ function EditProperty() {
       city: formData.city.trim(),
       state: formData.state.trim(),
       zipCode: formData.zipCode.trim(),
-      latitude: existingProperty.latitude ?? null,
-      longitude: existingProperty.longitude ?? null,
+      latitude: formData.latitude ? Number(formData.latitude) : null,
+      longitude: formData.longitude ? Number(formData.longitude) : null,
       status: existingProperty.status || "AVAILABLE",
       isApproved: existingProperty.isApproved ?? false,
     };
@@ -419,6 +446,55 @@ function EditProperty() {
                     required
                   />
                 </label>
+              </div>
+            </div>
+
+            <div className="property-form-divider" />
+
+            <div className="property-form-section">
+              <div className="property-section-heading">
+                <span>
+                  <FiMapPin />
+                </span>
+                <div>
+                  <h2>Location Coordinates</h2>
+                  <p>Provide GPS coordinates for your property manually or automatically</p>
+                </div>
+              </div>
+              <div className="property-form-grid">
+                <label className="property-field">
+                  Latitude
+                  <input
+                    type="number"
+                    step="any"
+                    name="latitude"
+                    value={formData.latitude}
+                    onChange={handleChange}
+                    placeholder="e.g. 19.0760"
+                  />
+                </label>
+                <label className="property-field">
+                  Longitude
+                  <input
+                    type="number"
+                    step="any"
+                    name="longitude"
+                    value={formData.longitude}
+                    onChange={handleChange}
+                    placeholder="e.g. 72.8777"
+                  />
+                </label>
+                <div className="property-field property-full-width" style={{ marginTop: '10px' }}>
+                  <button 
+                    type="button" 
+                    className="property-secondary-button" 
+                    onClick={handleGPSLocation}
+                    style={{ width: 'fit-content' }}
+                  >
+                    <FiMapPin style={{ marginRight: '8px' }} />
+                    Get Current Location (GPS)
+                  </button>
+                </div>
               </div>
             </div>
 

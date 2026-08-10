@@ -144,20 +144,4 @@
     </task>
     <servers />
   </component>
-  <component name="play_dynamic_filters_status">
-    <option name="appIdToCheckInfo">
-      <map>
-        <entry key="com.myapplication.office_spaces">
-          <value>
-            <CheckInfo lastCheckTimestamp="1786097383261" />
-          </value>
-        </entry>
-        <entry key="com.myapplication.office_spaces.test">
-          <value>
-            <CheckInfo lastCheckTimestamp="1786097383262" />
-          </value>
-        </entry>
-      </map>
-    </option>
-  </component>
 </project>

@@ -1,0 +1,17 @@
+<vector xmlns:android="http://schemas.android.com/apk/res/android"
+    android:width="24dp"
+    android:height="24dp"
+    android:viewportWidth="24"
+    android:viewportHeight="24">
+
+    <!-- House -->
+    <path
+        android:fillColor="#2563EB"
+        android:pathData="M12,3L3,10h2v9h5v-5h4v5h5v-9h2L12,3z"/>
+
+    <!-- Key -->
+    <path
+        android:fillColor="#F59E0B"
+        android:pathData="M17,14a2,2 0 1,1 0,4a2,2 0 0,1 0,-4zm2.5,2h2v1h-1v1h-1v-1h-1v-1h1v-1h1v1z"/>
+
+</vector>
