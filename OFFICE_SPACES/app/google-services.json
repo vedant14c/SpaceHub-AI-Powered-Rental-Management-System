@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "898477186786",
+    "project_id": "spacehub-4087a",
+    "storage_bucket": "spacehub-4087a.firebasestorage.app"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:898477186786:android:f90bc10e3ac55f306b48bb",
+        "android_client_info": {
+          "package_name": "com.myapplication.office_spaces"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyAZ6KUs8vNn5hgFFzSCTXEbDo0vQuIHS_I"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
