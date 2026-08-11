@@ -1,19 +1,25 @@
 package com.officespace.services;
 
+import java.time.LocalDateTime;
 import java.util.Map;
 
 import org.json.JSONObject;
 import org.springframework.beans.factory.annotation.Value;
 import org.springframework.stereotype.Service;
 
+import com.officespace.daos.NotificationDao;
 import com.officespace.daos.PaymentDao;
 import com.officespace.daos.PropertyDao;
 import com.officespace.daos.PropertyRequestDao;
+import com.officespace.daos.UserDao;
 import com.officespace.dtos.VerifyPaymentRequest;
 import com.officespace.entities.BookingStatus;
+import com.officespace.entities.Notification;
+import com.officespace.entities.NotificationType;
 import com.officespace.entities.Payment;
 import com.officespace.entities.Property;
 import com.officespace.entities.PropertyRequest;
+import com.officespace.entities.User;
 import com.razorpay.Order;
 import com.razorpay.RazorpayClient;
 import com.razorpay.Utils;
@@ -34,17 +40,27 @@ public class PaymentServiceImpl {
     private final PropertyRequestDao propertyRequestDao;
     private final PropertyDao propertyDao;
     private final BookingValidationService validationService;
-
+    private final UserDao userDao;
+    private final NotificationDao notificationDao;
+    private final NotificationServiceImpl notificationServiceImpl;
     public PaymentServiceImpl(
-        PaymentDao paymentDao,
-        PropertyRequestDao propertyRequestDao,
-        PropertyDao propertyDao,
-        BookingValidationService validationService
+    		PaymentDao paymentDao,
+    	    PropertyRequestDao propertyRequestDao,
+    	    PropertyDao propertyDao,
+    	    BookingValidationService validationService,
+    	    UserDao userDao,
+    	    NotificationDao notificationDao,
+    	    NotificationServiceImpl notificationServiceImpl
+        
+        
     ) {
-        this.paymentDao = paymentDao;
+    	this.paymentDao = paymentDao;
         this.propertyRequestDao = propertyRequestDao;
         this.propertyDao = propertyDao;
         this.validationService = validationService;
+        this.userDao = userDao;
+        this.notificationDao = notificationDao;
+        this.notificationServiceImpl = notificationServiceImpl;
     }
 
     public Map<String, Object> createOrder(int requestId, int userId) {
@@ -148,6 +164,32 @@ public class PaymentServiceImpl {
 
             request.setStatus(BookingStatus.CONFIRMED);
             propertyRequestDao.save(request);
+
+            Property property = propertyDao.findById(request.getPropertyId()).orElse(null);
+            if (property != null) {
+                User owner = userDao.findById(property.getOwnerId()).orElse(null);
+                if (owner != null) {
+                    Notification notification = new Notification();
+                    notification.setUserId(owner.getId());
+                    notification.setRequestId(request.getRequestId());
+                    notification.setTitle("Payment Received");
+                    notification.setMessage("Payment confirmed for your property \"" + property.getTitle() + "\".");
+                    notification.setType(NotificationType.RENTAL);
+                    notification.setIsRead(false);
+                    notification.setCreatedAt(LocalDateTime.now());
+                    notificationDao.save(notification);
+
+                    if (owner.getFcmToken() != null) {
+                        notificationServiceImpl.sendPushNotification(
+                                owner.getFcmToken(),
+                                "Payment Received",
+                                "Payment confirmed for your property \"" + property.getTitle() + "\".",
+                                "PAYMENT",
+                                String.valueOf(request.getRequestId())
+                        );
+                    }
+                }
+            }
 
             return payment;
         } catch (RuntimeException e) {
