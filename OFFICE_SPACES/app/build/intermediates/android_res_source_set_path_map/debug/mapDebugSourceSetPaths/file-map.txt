@@ -1,9 +1,9 @@
-com.myapplication.office_spaces.app-pngs-0 D:\GITHUBCORRECTION\OFFICE_SPACES\app\build\generated\res\pngs\debug
-com.myapplication.office_spaces.app-res-1 D:\GITHUBCORRECTION\OFFICE_SPACES\app\build\generated\res\processDebugGoogleServices
-com.myapplication.office_spaces.app-updated_navigation_xml-2 D:\GITHUBCORRECTION\OFFICE_SPACES\app\build\generated\updated_navigation_xml\debug
-com.myapplication.office_spaces.app-packageDebugResources-3 D:\GITHUBCORRECTION\OFFICE_SPACES\app\build\intermediates\incremental\debug\packageDebugResources\merged.dir
-com.myapplication.office_spaces.app-packageDebugResources-4 D:\GITHUBCORRECTION\OFFICE_SPACES\app\build\intermediates\incremental\debug\packageDebugResources\stripped.dir
-com.myapplication.office_spaces.app-debug-5 D:\GITHUBCORRECTION\OFFICE_SPACES\app\build\intermediates\merged_res\debug\mergeDebugResources
-com.myapplication.office_spaces.app-debug-6 D:\GITHUBCORRECTION\OFFICE_SPACES\app\src\debug\res
-com.myapplication.office_spaces.app-main-7 D:\GITHUBCORRECTION\OFFICE_SPACES\app\src\main\res
+com.myapplication.office_spaces.app-pngs-0 D:\SpcaeHub Project\SpaceHub-AI-Powered-Rental-Management-System\OFFICE_SPACES\app\build\generated\res\pngs\debug
+com.myapplication.office_spaces.app-res-1 D:\SpcaeHub Project\SpaceHub-AI-Powered-Rental-Management-System\OFFICE_SPACES\app\build\generated\res\processDebugGoogleServices
+com.myapplication.office_spaces.app-updated_navigation_xml-2 D:\SpcaeHub Project\SpaceHub-AI-Powered-Rental-Management-System\OFFICE_SPACES\app\build\generated\updated_navigation_xml\debug
+com.myapplication.office_spaces.app-packageDebugResources-3 D:\SpcaeHub Project\SpaceHub-AI-Powered-Rental-Management-System\OFFICE_SPACES\app\build\intermediates\incremental\debug\packageDebugResources\merged.dir
+com.myapplication.office_spaces.app-packageDebugResources-4 D:\SpcaeHub Project\SpaceHub-AI-Powered-Rental-Management-System\OFFICE_SPACES\app\build\intermediates\incremental\debug\packageDebugResources\stripped.dir
+com.myapplication.office_spaces.app-debug-5 D:\SpcaeHub Project\SpaceHub-AI-Powered-Rental-Management-System\OFFICE_SPACES\app\build\intermediates\merged_res\debug\mergeDebugResources
+com.myapplication.office_spaces.app-debug-6 D:\SpcaeHub Project\SpaceHub-AI-Powered-Rental-Management-System\OFFICE_SPACES\app\src\debug\res
+com.myapplication.office_spaces.app-main-7 D:\SpcaeHub Project\SpaceHub-AI-Powered-Rental-Management-System\OFFICE_SPACES\app\src\main\res
 gradleHome-0 C:\Users\Vedant\.gradle

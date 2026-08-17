@@ -34,3 +34,6 @@ build/
 ### VS Code ###
 .vscode/
 spacehub-4087a-firebase-adminsdk-fbsvc-c0f17b160c.json
+OfficeSpaces/env
+OFFICE_SPACES/.idea/workspace.xml
+
