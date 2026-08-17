@@ -1,9 +1,9 @@
 -- Merging decision tree log ---
 manifest
-ADDED from D:\GITHUBCORRECTION\OFFICE_SPACES\app\src\main\AndroidManifest.xml:2:1-91:12
-INJECTED from D:\GITHUBCORRECTION\OFFICE_SPACES\app\src\main\AndroidManifest.xml:2:1-91:12
-INJECTED from D:\GITHUBCORRECTION\OFFICE_SPACES\app\src\main\AndroidManifest.xml:2:1-91:12
-INJECTED from D:\GITHUBCORRECTION\OFFICE_SPACES\app\src\main\AndroidManifest.xml:2:1-91:12
+ADDED from D:\SpcaeHub Project\SpaceHub-AI-Powered-Rental-Management-System\OFFICE_SPACES\app\src\main\AndroidManifest.xml:2:1-91:12
+INJECTED from D:\SpcaeHub Project\SpaceHub-AI-Powered-Rental-Management-System\OFFICE_SPACES\app\src\main\AndroidManifest.xml:2:1-91:12
+INJECTED from D:\SpcaeHub Project\SpaceHub-AI-Powered-Rental-Management-System\OFFICE_SPACES\app\src\main\AndroidManifest.xml:2:1-91:12
+INJECTED from D:\SpcaeHub Project\SpaceHub-AI-Powered-Rental-Management-System\OFFICE_SPACES\app\src\main\AndroidManifest.xml:2:1-91:12
 MERGED from [com.google.android.gms:play-services-location:21.4.0] C:\Users\Vedant\.gradle\caches\9.4.1\transforms\46d5c68d7e7b38b4e31398864510895e\transformed\play-services-location-21.4.0\AndroidManifest.xml:2:1-9:12
 MERGED from [com.google.android.material:material:1.14.0] C:\Users\Vedant\.gradle\caches\9.4.1\transforms\2005ea027812ac6b78378c686a75c9f2\transformed\material-1.14.0\AndroidManifest.xml:17:1-24:12
 MERGED from [androidx.constraintlayout:constraintlayout:2.2.1] C:\Users\Vedant\.gradle\caches\9.4.1\transforms\46e43351594271f46a0540225733320e\transformed\constraintlayout-2.2.1\AndroidManifest.xml:2:1-9:12
@@ -96,17 +96,17 @@ MERGED from [androidx.arch.core:core-runtime:2.2.0] C:\Users\Vedant\.gradle\cach
 MERGED from [androidx.compose.runtime:runtime-annotation-android:1.9.0] C:\Users\Vedant\.gradle\caches\9.4.1\transforms\1d98a1d1363ad71b9f9ada3417425c05\transformed\runtime-annotation\AndroidManifest.xml:2:1-7:12
 MERGED from [com.razorpay:core:1.0.18] C:\Users\Vedant\.gradle\caches\9.4.1\transforms\f26d3d599e6ba703d88f7f2b67f074fd\transformed\core-1.0.18\AndroidManifest.xml:2:1-46:12
 	package
-		INJECTED from D:\GITHUBCORRECTION\OFFICE_SPACES\app\src\main\AndroidManifest.xml
+		INJECTED from D:\SpcaeHub Project\SpaceHub-AI-Powered-Rental-Management-System\OFFICE_SPACES\app\src\main\AndroidManifest.xml
 	android:versionName
-		INJECTED from D:\GITHUBCORRECTION\OFFICE_SPACES\app\src\main\AndroidManifest.xml
+		INJECTED from D:\SpcaeHub Project\SpaceHub-AI-Powered-Rental-Management-System\OFFICE_SPACES\app\src\main\AndroidManifest.xml
 	xmlns:tools
-		ADDED from D:\GITHUBCORRECTION\OFFICE_SPACES\app\src\main\AndroidManifest.xml:3:5-51
+		ADDED from D:\SpcaeHub Project\SpaceHub-AI-Powered-Rental-Management-System\OFFICE_SPACES\app\src\main\AndroidManifest.xml:3:5-51
 	android:versionCode
-		INJECTED from D:\GITHUBCORRECTION\OFFICE_SPACES\app\src\main\AndroidManifest.xml
+		INJECTED from D:\SpcaeHub Project\SpaceHub-AI-Powered-Rental-Management-System\OFFICE_SPACES\app\src\main\AndroidManifest.xml
 	xmlns:android
-		ADDED from D:\GITHUBCORRECTION\OFFICE_SPACES\app\src\main\AndroidManifest.xml:2:11-69
+		ADDED from D:\SpcaeHub Project\SpaceHub-AI-Powered-Rental-Management-System\OFFICE_SPACES\app\src\main\AndroidManifest.xml:2:11-69
 uses-permission#android.permission.INTERNET
-ADDED from D:\GITHUBCORRECTION\OFFICE_SPACES\app\src\main\AndroidManifest.xml:5:5-67
+ADDED from D:\SpcaeHub Project\SpaceHub-AI-Powered-Rental-Management-System\OFFICE_SPACES\app\src\main\AndroidManifest.xml:5:5-67
 MERGED from [com.razorpay:standard-core:1.7.18] C:\Users\Vedant\.gradle\caches\9.4.1\transforms\d608b340cb571c0b4f3707c03cf2afae\transformed\standard-core-1.7.18\AndroidManifest.xml:8:5-67
 MERGED from [com.razorpay:standard-core:1.7.18] C:\Users\Vedant\.gradle\caches\9.4.1\transforms\d608b340cb571c0b4f3707c03cf2afae\transformed\standard-core-1.7.18\AndroidManifest.xml:8:5-67
 MERGED from [com.google.android.gms:play-services-maps:19.1.0] C:\Users\Vedant\.gradle\caches\9.4.1\transforms\7f2d34bcaebf9295286086d784cfe970\transformed\play-services-maps-19.1.0\AndroidManifest.xml:21:5-66
@@ -128,9 +128,9 @@ MERGED from [com.google.android.datatransport:transport-backend-cct:3.1.9] C:\Us
 MERGED from [com.razorpay:core:1.0.18] C:\Users\Vedant\.gradle\caches\9.4.1\transforms\f26d3d599e6ba703d88f7f2b67f074fd\transformed\core-1.0.18\AndroidManifest.xml:7:5-67
 MERGED from [com.razorpay:core:1.0.18] C:\Users\Vedant\.gradle\caches\9.4.1\transforms\f26d3d599e6ba703d88f7f2b67f074fd\transformed\core-1.0.18\AndroidManifest.xml:7:5-67
 	android:name
-		ADDED from D:\GITHUBCORRECTION\OFFICE_SPACES\app\src\main\AndroidManifest.xml:5:22-64
+		ADDED from D:\SpcaeHub Project\SpaceHub-AI-Powered-Rental-Management-System\OFFICE_SPACES\app\src\main\AndroidManifest.xml:5:22-64
 uses-permission#android.permission.ACCESS_NETWORK_STATE
-ADDED from D:\GITHUBCORRECTION\OFFICE_SPACES\app\src\main\AndroidManifest.xml:6:5-79
+ADDED from D:\SpcaeHub Project\SpaceHub-AI-Powered-Rental-Management-System\OFFICE_SPACES\app\src\main\AndroidManifest.xml:6:5-79
 MERGED from [com.google.android.gms:play-services-maps:19.1.0] C:\Users\Vedant\.gradle\caches\9.4.1\transforms\7f2d34bcaebf9295286086d784cfe970\transformed\play-services-maps-19.1.0\AndroidManifest.xml:20:5-78
 MERGED from [com.google.android.gms:play-services-maps:19.1.0] C:\Users\Vedant\.gradle\caches\9.4.1\transforms\7f2d34bcaebf9295286086d784cfe970\transformed\play-services-maps-19.1.0\AndroidManifest.xml:20:5-78
 MERGED from [com.google.firebase:firebase-messaging:24.1.0] C:\Users\Vedant\.gradle\caches\9.4.1\transforms\0fb1a4dc1fb8f566a57fb961e38fc9c6\transformed\firebase-messaging-24.1.0\AndroidManifest.xml:22:5-79
@@ -154,24 +154,24 @@ MERGED from [com.google.android.datatransport:transport-runtime:3.1.9] C:\Users\
 MERGED from [com.razorpay:core:1.0.18] C:\Users\Vedant\.gradle\caches\9.4.1\transforms\f26d3d599e6ba703d88f7f2b67f074fd\transformed\core-1.0.18\AndroidManifest.xml:8:5-79
 MERGED from [com.razorpay:core:1.0.18] C:\Users\Vedant\.gradle\caches\9.4.1\transforms\f26d3d599e6ba703d88f7f2b67f074fd\transformed\core-1.0.18\AndroidManifest.xml:8:5-79
 	android:name
-		ADDED from D:\GITHUBCORRECTION\OFFICE_SPACES\app\src\main\AndroidManifest.xml:6:22-76
+		ADDED from D:\SpcaeHub Project\SpaceHub-AI-Powered-Rental-Management-System\OFFICE_SPACES\app\src\main\AndroidManifest.xml:6:22-76
 uses-permission#android.permission.ACCESS_FINE_LOCATION
-ADDED from D:\GITHUBCORRECTION\OFFICE_SPACES\app\src\main\AndroidManifest.xml:7:5-79
+ADDED from D:\SpcaeHub Project\SpaceHub-AI-Powered-Rental-Management-System\OFFICE_SPACES\app\src\main\AndroidManifest.xml:7:5-79
 	android:name
-		ADDED from D:\GITHUBCORRECTION\OFFICE_SPACES\app\src\main\AndroidManifest.xml:7:22-76
+		ADDED from D:\SpcaeHub Project\SpaceHub-AI-Powered-Rental-Management-System\OFFICE_SPACES\app\src\main\AndroidManifest.xml:7:22-76
 uses-permission#android.permission.ACCESS_COARSE_LOCATION
-ADDED from D:\GITHUBCORRECTION\OFFICE_SPACES\app\src\main\AndroidManifest.xml:8:5-81
+ADDED from D:\SpcaeHub Project\SpaceHub-AI-Powered-Rental-Management-System\OFFICE_SPACES\app\src\main\AndroidManifest.xml:8:5-81
 	android:name
-		ADDED from D:\GITHUBCORRECTION\OFFICE_SPACES\app\src\main\AndroidManifest.xml:8:22-78
+		ADDED from D:\SpcaeHub Project\SpaceHub-AI-Powered-Rental-Management-System\OFFICE_SPACES\app\src\main\AndroidManifest.xml:8:22-78
 uses-permission#android.permission.POST_NOTIFICATIONS
-ADDED from D:\GITHUBCORRECTION\OFFICE_SPACES\app\src\main\AndroidManifest.xml:9:5-77
+ADDED from D:\SpcaeHub Project\SpaceHub-AI-Powered-Rental-Management-System\OFFICE_SPACES\app\src\main\AndroidManifest.xml:9:5-77
 MERGED from [com.google.firebase:firebase-messaging:24.1.0] C:\Users\Vedant\.gradle\caches\9.4.1\transforms\0fb1a4dc1fb8f566a57fb961e38fc9c6\transformed\firebase-messaging-24.1.0\AndroidManifest.xml:23:5-77
 MERGED from [com.google.firebase:firebase-messaging:24.1.0] C:\Users\Vedant\.gradle\caches\9.4.1\transforms\0fb1a4dc1fb8f566a57fb961e38fc9c6\transformed\firebase-messaging-24.1.0\AndroidManifest.xml:23:5-77
 	android:name
-		ADDED from D:\GITHUBCORRECTION\OFFICE_SPACES\app\src\main\AndroidManifest.xml:9:22-74
+		ADDED from D:\SpcaeHub Project\SpaceHub-AI-Powered-Rental-Management-System\OFFICE_SPACES\app\src\main\AndroidManifest.xml:9:22-74
 application
-ADDED from D:\GITHUBCORRECTION\OFFICE_SPACES\app\src\main\AndroidManifest.xml:11:5-89:19
-INJECTED from D:\GITHUBCORRECTION\OFFICE_SPACES\app\src\main\AndroidManifest.xml:11:5-89:19
+ADDED from D:\SpcaeHub Project\SpaceHub-AI-Powered-Rental-Management-System\OFFICE_SPACES\app\src\main\AndroidManifest.xml:11:5-89:19
+INJECTED from D:\SpcaeHub Project\SpaceHub-AI-Powered-Rental-Management-System\OFFICE_SPACES\app\src\main\AndroidManifest.xml:11:5-89:19
 MERGED from [com.google.android.gms:play-services-location:21.4.0] C:\Users\Vedant\.gradle\caches\9.4.1\transforms\46d5c68d7e7b38b4e31398864510895e\transformed\play-services-location-21.4.0\AndroidManifest.xml:7:5-20
 MERGED from [com.google.android.gms:play-services-location:21.4.0] C:\Users\Vedant\.gradle\caches\9.4.1\transforms\46d5c68d7e7b38b4e31398864510895e\transformed\play-services-location-21.4.0\AndroidManifest.xml:7:5-20
 MERGED from [com.google.android.material:material:1.14.0] C:\Users\Vedant\.gradle\caches\9.4.1\transforms\2005ea027812ac6b78378c686a75c9f2\transformed\material-1.14.0\AndroidManifest.xml:22:5-20
@@ -245,169 +245,169 @@ MERGED from [com.google.android.datatransport:transport-runtime:3.1.9] C:\Users\
 MERGED from [com.razorpay:core:1.0.18] C:\Users\Vedant\.gradle\caches\9.4.1\transforms\f26d3d599e6ba703d88f7f2b67f074fd\transformed\core-1.0.18\AndroidManifest.xml:24:5-44:19
 MERGED from [com.razorpay:core:1.0.18] C:\Users\Vedant\.gradle\caches\9.4.1\transforms\f26d3d599e6ba703d88f7f2b67f074fd\transformed\core-1.0.18\AndroidManifest.xml:24:5-44:19
 	android:extractNativeLibs
-		INJECTED from D:\GITHUBCORRECTION\OFFICE_SPACES\app\src\main\AndroidManifest.xml
+		INJECTED from D:\SpcaeHub Project\SpaceHub-AI-Powered-Rental-Management-System\OFFICE_SPACES\app\src\main\AndroidManifest.xml
 	android:appComponentFactory
 		ADDED from [androidx.core:core:1.18.0] C:\Users\Vedant\.gradle\caches\9.4.1\transforms\40ab2de4110f130f9f2f959b4cc878d5\transformed\core-1.18.0\AndroidManifest.xml:28:18-86
 	android:supportsRtl
-		ADDED from D:\GITHUBCORRECTION\OFFICE_SPACES\app\src\main\AndroidManifest.xml:18:9-35
+		ADDED from D:\SpcaeHub Project\SpaceHub-AI-Powered-Rental-Management-System\OFFICE_SPACES\app\src\main\AndroidManifest.xml:18:9-35
 	android:label
-		ADDED from D:\GITHUBCORRECTION\OFFICE_SPACES\app\src\main\AndroidManifest.xml:16:9-41
+		ADDED from D:\SpcaeHub Project\SpaceHub-AI-Powered-Rental-Management-System\OFFICE_SPACES\app\src\main\AndroidManifest.xml:16:9-41
 	android:fullBackupContent
-		ADDED from D:\GITHUBCORRECTION\OFFICE_SPACES\app\src\main\AndroidManifest.xml:14:9-54
+		ADDED from D:\SpcaeHub Project\SpaceHub-AI-Powered-Rental-Management-System\OFFICE_SPACES\app\src\main\AndroidManifest.xml:14:9-54
 	android:roundIcon
-		ADDED from D:\GITHUBCORRECTION\OFFICE_SPACES\app\src\main\AndroidManifest.xml:17:9-54
+		ADDED from D:\SpcaeHub Project\SpaceHub-AI-Powered-Rental-Management-System\OFFICE_SPACES\app\src\main\AndroidManifest.xml:17:9-54
 	android:icon
-		ADDED from D:\GITHUBCORRECTION\OFFICE_SPACES\app\src\main\AndroidManifest.xml:15:9-43
+		ADDED from D:\SpcaeHub Project\SpaceHub-AI-Powered-Rental-Management-System\OFFICE_SPACES\app\src\main\AndroidManifest.xml:15:9-43
 	android:allowBackup
-		ADDED from D:\GITHUBCORRECTION\OFFICE_SPACES\app\src\main\AndroidManifest.xml:12:9-35
+		ADDED from D:\SpcaeHub Project\SpaceHub-AI-Powered-Rental-Management-System\OFFICE_SPACES\app\src\main\AndroidManifest.xml:12:9-35
 	android:theme
-		ADDED from D:\GITHUBCORRECTION\OFFICE_SPACES\app\src\main\AndroidManifest.xml:20:9-51
+		ADDED from D:\SpcaeHub Project\SpaceHub-AI-Powered-Rental-Management-System\OFFICE_SPACES\app\src\main\AndroidManifest.xml:20:9-51
 	android:dataExtractionRules
-		ADDED from D:\GITHUBCORRECTION\OFFICE_SPACES\app\src\main\AndroidManifest.xml:13:9-65
+		ADDED from D:\SpcaeHub Project\SpaceHub-AI-Powered-Rental-Management-System\OFFICE_SPACES\app\src\main\AndroidManifest.xml:13:9-65
 	android:usesCleartextTraffic
-		ADDED from D:\GITHUBCORRECTION\OFFICE_SPACES\app\src\main\AndroidManifest.xml:19:9-44
+		ADDED from D:\SpcaeHub Project\SpaceHub-AI-Powered-Rental-Management-System\OFFICE_SPACES\app\src\main\AndroidManifest.xml:19:9-44
 meta-data#com.google.android.geo.API_KEY
-ADDED from D:\GITHUBCORRECTION\OFFICE_SPACES\app\src\main\AndroidManifest.xml:22:9-24:55
+ADDED from D:\SpcaeHub Project\SpaceHub-AI-Powered-Rental-Management-System\OFFICE_SPACES\app\src\main\AndroidManifest.xml:22:9-24:55
 	android:value
-		ADDED from D:\GITHUBCORRECTION\OFFICE_SPACES\app\src\main\AndroidManifest.xml:24:13-52
+		ADDED from D:\SpcaeHub Project\SpaceHub-AI-Powered-Rental-Management-System\OFFICE_SPACES\app\src\main\AndroidManifest.xml:24:13-52
 	android:name
-		ADDED from D:\GITHUBCORRECTION\OFFICE_SPACES\app\src\main\AndroidManifest.xml:23:13-58
+		ADDED from D:\SpcaeHub Project\SpaceHub-AI-Powered-Rental-Management-System\OFFICE_SPACES\app\src\main\AndroidManifest.xml:23:13-58
 service#com.myapplication.office_spaces.network.MyFirebaseMessagingService
-ADDED from D:\GITHUBCORRECTION\OFFICE_SPACES\app\src\main\AndroidManifest.xml:26:9-32:19
+ADDED from D:\SpcaeHub Project\SpaceHub-AI-Powered-Rental-Management-System\OFFICE_SPACES\app\src\main\AndroidManifest.xml:26:9-32:19
 	android:exported
-		ADDED from D:\GITHUBCORRECTION\OFFICE_SPACES\app\src\main\AndroidManifest.xml:28:13-37
+		ADDED from D:\SpcaeHub Project\SpaceHub-AI-Powered-Rental-Management-System\OFFICE_SPACES\app\src\main\AndroidManifest.xml:28:13-37
 	android:name
-		ADDED from D:\GITHUBCORRECTION\OFFICE_SPACES\app\src\main\AndroidManifest.xml:27:13-63
+		ADDED from D:\SpcaeHub Project\SpaceHub-AI-Powered-Rental-Management-System\OFFICE_SPACES\app\src\main\AndroidManifest.xml:27:13-63
 intent-filter#action:name:com.google.firebase.MESSAGING_EVENT
-ADDED from D:\GITHUBCORRECTION\OFFICE_SPACES\app\src\main\AndroidManifest.xml:29:13-31:29
+ADDED from D:\SpcaeHub Project\SpaceHub-AI-Powered-Rental-Management-System\OFFICE_SPACES\app\src\main\AndroidManifest.xml:29:13-31:29
 action#com.google.firebase.MESSAGING_EVENT
-ADDED from D:\GITHUBCORRECTION\OFFICE_SPACES\app\src\main\AndroidManifest.xml:30:17-78
+ADDED from D:\SpcaeHub Project\SpaceHub-AI-Powered-Rental-Management-System\OFFICE_SPACES\app\src\main\AndroidManifest.xml:30:17-78
 	android:name
-		ADDED from D:\GITHUBCORRECTION\OFFICE_SPACES\app\src\main\AndroidManifest.xml:30:25-75
+		ADDED from D:\SpcaeHub Project\SpaceHub-AI-Powered-Rental-Management-System\OFFICE_SPACES\app\src\main\AndroidManifest.xml:30:25-75
 activity#com.myapplication.office_spaces.activities.LocationPickerActivity
-ADDED from D:\GITHUBCORRECTION\OFFICE_SPACES\app\src\main\AndroidManifest.xml:34:9-36:40
+ADDED from D:\SpcaeHub Project\SpaceHub-AI-Powered-Rental-Management-System\OFFICE_SPACES\app\src\main\AndroidManifest.xml:34:9-36:40
 	android:exported
-		ADDED from D:\GITHUBCORRECTION\OFFICE_SPACES\app\src\main\AndroidManifest.xml:36:13-37
+		ADDED from D:\SpcaeHub Project\SpaceHub-AI-Powered-Rental-Management-System\OFFICE_SPACES\app\src\main\AndroidManifest.xml:36:13-37
 	android:name
-		ADDED from D:\GITHUBCORRECTION\OFFICE_SPACES\app\src\main\AndroidManifest.xml:35:13-62
+		ADDED from D:\SpcaeHub Project\SpaceHub-AI-Powered-Rental-Management-System\OFFICE_SPACES\app\src\main\AndroidManifest.xml:35:13-62
 activity#com.myapplication.office_spaces.activities.EditProfileActivity
-ADDED from D:\GITHUBCORRECTION\OFFICE_SPACES\app\src\main\AndroidManifest.xml:37:9-93
+ADDED from D:\SpcaeHub Project\SpaceHub-AI-Powered-Rental-Management-System\OFFICE_SPACES\app\src\main\AndroidManifest.xml:37:9-93
 	android:exported
-		ADDED from D:\GITHUBCORRECTION\OFFICE_SPACES\app\src\main\AndroidManifest.xml:37:66-90
+		ADDED from D:\SpcaeHub Project\SpaceHub-AI-Powered-Rental-Management-System\OFFICE_SPACES\app\src\main\AndroidManifest.xml:37:66-90
 	android:name
-		ADDED from D:\GITHUBCORRECTION\OFFICE_SPACES\app\src\main\AndroidManifest.xml:37:19-65
+		ADDED from D:\SpcaeHub Project\SpaceHub-AI-Powered-Rental-Management-System\OFFICE_SPACES\app\src\main\AndroidManifest.xml:37:19-65
 activity#com.myapplication.office_spaces.activities.MyRequestsActivity
-ADDED from D:\GITHUBCORRECTION\OFFICE_SPACES\app\src\main\AndroidManifest.xml:38:9-66
+ADDED from D:\SpcaeHub Project\SpaceHub-AI-Powered-Rental-Management-System\OFFICE_SPACES\app\src\main\AndroidManifest.xml:38:9-66
 	android:name
-		ADDED from D:\GITHUBCORRECTION\OFFICE_SPACES\app\src\main\AndroidManifest.xml:38:19-64
+		ADDED from D:\SpcaeHub Project\SpaceHub-AI-Powered-Rental-Management-System\OFFICE_SPACES\app\src\main\AndroidManifest.xml:38:19-64
 activity#com.myapplication.office_spaces.activities.FavoritesActivity
-ADDED from D:\GITHUBCORRECTION\OFFICE_SPACES\app\src\main\AndroidManifest.xml:39:9-91
+ADDED from D:\SpcaeHub Project\SpaceHub-AI-Powered-Rental-Management-System\OFFICE_SPACES\app\src\main\AndroidManifest.xml:39:9-91
 	android:exported
-		ADDED from D:\GITHUBCORRECTION\OFFICE_SPACES\app\src\main\AndroidManifest.xml:39:64-88
+		ADDED from D:\SpcaeHub Project\SpaceHub-AI-Powered-Rental-Management-System\OFFICE_SPACES\app\src\main\AndroidManifest.xml:39:64-88
 	android:name
-		ADDED from D:\GITHUBCORRECTION\OFFICE_SPACES\app\src\main\AndroidManifest.xml:39:19-63
+		ADDED from D:\SpcaeHub Project\SpaceHub-AI-Powered-Rental-Management-System\OFFICE_SPACES\app\src\main\AndroidManifest.xml:39:19-63
 activity#com.myapplication.office_spaces.activities.NotificationsActivity
-ADDED from D:\GITHUBCORRECTION\OFFICE_SPACES\app\src\main\AndroidManifest.xml:40:9-69
+ADDED from D:\SpcaeHub Project\SpaceHub-AI-Powered-Rental-Management-System\OFFICE_SPACES\app\src\main\AndroidManifest.xml:40:9-69
 	android:name
-		ADDED from D:\GITHUBCORRECTION\OFFICE_SPACES\app\src\main\AndroidManifest.xml:40:19-67
+		ADDED from D:\SpcaeHub Project\SpaceHub-AI-Powered-Rental-Management-System\OFFICE_SPACES\app\src\main\AndroidManifest.xml:40:19-67
 activity#com.myapplication.office_spaces.activities.BlockUsersActivity
-ADDED from D:\GITHUBCORRECTION\OFFICE_SPACES\app\src\main\AndroidManifest.xml:41:9-43:40
+ADDED from D:\SpcaeHub Project\SpaceHub-AI-Powered-Rental-Management-System\OFFICE_SPACES\app\src\main\AndroidManifest.xml:41:9-43:40
 	android:exported
-		ADDED from D:\GITHUBCORRECTION\OFFICE_SPACES\app\src\main\AndroidManifest.xml:43:13-37
+		ADDED from D:\SpcaeHub Project\SpaceHub-AI-Powered-Rental-Management-System\OFFICE_SPACES\app\src\main\AndroidManifest.xml:43:13-37
 	android:name
-		ADDED from D:\GITHUBCORRECTION\OFFICE_SPACES\app\src\main\AndroidManifest.xml:42:13-58
+		ADDED from D:\SpcaeHub Project\SpaceHub-AI-Powered-Rental-Management-System\OFFICE_SPACES\app\src\main\AndroidManifest.xml:42:13-58
 activity#com.myapplication.office_spaces.activities.AdminMainActivity
-ADDED from D:\GITHUBCORRECTION\OFFICE_SPACES\app\src\main\AndroidManifest.xml:44:9-46:40
+ADDED from D:\SpcaeHub Project\SpaceHub-AI-Powered-Rental-Management-System\OFFICE_SPACES\app\src\main\AndroidManifest.xml:44:9-46:40
 	android:exported
-		ADDED from D:\GITHUBCORRECTION\OFFICE_SPACES\app\src\main\AndroidManifest.xml:46:13-37
+		ADDED from D:\SpcaeHub Project\SpaceHub-AI-Powered-Rental-Management-System\OFFICE_SPACES\app\src\main\AndroidManifest.xml:46:13-37
 	android:name
-		ADDED from D:\GITHUBCORRECTION\OFFICE_SPACES\app\src\main\AndroidManifest.xml:45:13-57
+		ADDED from D:\SpcaeHub Project\SpaceHub-AI-Powered-Rental-Management-System\OFFICE_SPACES\app\src\main\AndroidManifest.xml:45:13-57
 activity#com.myapplication.office_spaces.activities.AddListingActivity
-ADDED from D:\GITHUBCORRECTION\OFFICE_SPACES\app\src\main\AndroidManifest.xml:47:9-49:40
+ADDED from D:\SpcaeHub Project\SpaceHub-AI-Powered-Rental-Management-System\OFFICE_SPACES\app\src\main\AndroidManifest.xml:47:9-49:40
 	android:exported
-		ADDED from D:\GITHUBCORRECTION\OFFICE_SPACES\app\src\main\AndroidManifest.xml:49:13-37
+		ADDED from D:\SpcaeHub Project\SpaceHub-AI-Powered-Rental-Management-System\OFFICE_SPACES\app\src\main\AndroidManifest.xml:49:13-37
 	android:name
-		ADDED from D:\GITHUBCORRECTION\OFFICE_SPACES\app\src\main\AndroidManifest.xml:48:13-58
+		ADDED from D:\SpcaeHub Project\SpaceHub-AI-Powered-Rental-Management-System\OFFICE_SPACES\app\src\main\AndroidManifest.xml:48:13-58
 activity#com.myapplication.office_spaces.activities.OwnerMainActivity
-ADDED from D:\GITHUBCORRECTION\OFFICE_SPACES\app\src\main\AndroidManifest.xml:50:9-52:40
+ADDED from D:\SpcaeHub Project\SpaceHub-AI-Powered-Rental-Management-System\OFFICE_SPACES\app\src\main\AndroidManifest.xml:50:9-52:40
 	android:exported
-		ADDED from D:\GITHUBCORRECTION\OFFICE_SPACES\app\src\main\AndroidManifest.xml:52:13-37
+		ADDED from D:\SpcaeHub Project\SpaceHub-AI-Powered-Rental-Management-System\OFFICE_SPACES\app\src\main\AndroidManifest.xml:52:13-37
 	android:name
-		ADDED from D:\GITHUBCORRECTION\OFFICE_SPACES\app\src\main\AndroidManifest.xml:51:13-57
+		ADDED from D:\SpcaeHub Project\SpaceHub-AI-Powered-Rental-Management-System\OFFICE_SPACES\app\src\main\AndroidManifest.xml:51:13-57
 activity#com.myapplication.office_spaces.activities.BookPropertyActivity
-ADDED from D:\GITHUBCORRECTION\OFFICE_SPACES\app\src\main\AndroidManifest.xml:53:9-55:40
+ADDED from D:\SpcaeHub Project\SpaceHub-AI-Powered-Rental-Management-System\OFFICE_SPACES\app\src\main\AndroidManifest.xml:53:9-55:40
 	android:exported
-		ADDED from D:\GITHUBCORRECTION\OFFICE_SPACES\app\src\main\AndroidManifest.xml:55:13-37
+		ADDED from D:\SpcaeHub Project\SpaceHub-AI-Powered-Rental-Management-System\OFFICE_SPACES\app\src\main\AndroidManifest.xml:55:13-37
 	android:name
-		ADDED from D:\GITHUBCORRECTION\OFFICE_SPACES\app\src\main\AndroidManifest.xml:54:13-60
+		ADDED from D:\SpcaeHub Project\SpaceHub-AI-Powered-Rental-Management-System\OFFICE_SPACES\app\src\main\AndroidManifest.xml:54:13-60
 activity#com.myapplication.office_spaces.activities.SendInquiryActivity
-ADDED from D:\GITHUBCORRECTION\OFFICE_SPACES\app\src\main\AndroidManifest.xml:56:9-58:40
+ADDED from D:\SpcaeHub Project\SpaceHub-AI-Powered-Rental-Management-System\OFFICE_SPACES\app\src\main\AndroidManifest.xml:56:9-58:40
 	android:exported
-		ADDED from D:\GITHUBCORRECTION\OFFICE_SPACES\app\src\main\AndroidManifest.xml:58:13-37
+		ADDED from D:\SpcaeHub Project\SpaceHub-AI-Powered-Rental-Management-System\OFFICE_SPACES\app\src\main\AndroidManifest.xml:58:13-37
 	android:name
-		ADDED from D:\GITHUBCORRECTION\OFFICE_SPACES\app\src\main\AndroidManifest.xml:57:13-59
+		ADDED from D:\SpcaeHub Project\SpaceHub-AI-Powered-Rental-Management-System\OFFICE_SPACES\app\src\main\AndroidManifest.xml:57:13-59
 activity#com.myapplication.office_spaces.activities.PropertyDetailsActivity
-ADDED from D:\GITHUBCORRECTION\OFFICE_SPACES\app\src\main\AndroidManifest.xml:59:9-61:40
+ADDED from D:\SpcaeHub Project\SpaceHub-AI-Powered-Rental-Management-System\OFFICE_SPACES\app\src\main\AndroidManifest.xml:59:9-61:40
 	android:exported
-		ADDED from D:\GITHUBCORRECTION\OFFICE_SPACES\app\src\main\AndroidManifest.xml:61:13-37
+		ADDED from D:\SpcaeHub Project\SpaceHub-AI-Powered-Rental-Management-System\OFFICE_SPACES\app\src\main\AndroidManifest.xml:61:13-37
 	android:name
-		ADDED from D:\GITHUBCORRECTION\OFFICE_SPACES\app\src\main\AndroidManifest.xml:60:13-63
+		ADDED from D:\SpcaeHub Project\SpaceHub-AI-Powered-Rental-Management-System\OFFICE_SPACES\app\src\main\AndroidManifest.xml:60:13-63
 activity#com.myapplication.office_spaces.activities.SearchResultActivity
-ADDED from D:\GITHUBCORRECTION\OFFICE_SPACES\app\src\main\AndroidManifest.xml:62:9-64:40
+ADDED from D:\SpcaeHub Project\SpaceHub-AI-Powered-Rental-Management-System\OFFICE_SPACES\app\src\main\AndroidManifest.xml:62:9-64:40
 	android:exported
-		ADDED from D:\GITHUBCORRECTION\OFFICE_SPACES\app\src\main\AndroidManifest.xml:64:13-37
+		ADDED from D:\SpcaeHub Project\SpaceHub-AI-Powered-Rental-Management-System\OFFICE_SPACES\app\src\main\AndroidManifest.xml:64:13-37
 	android:name
-		ADDED from D:\GITHUBCORRECTION\OFFICE_SPACES\app\src\main\AndroidManifest.xml:63:13-60
+		ADDED from D:\SpcaeHub Project\SpaceHub-AI-Powered-Rental-Management-System\OFFICE_SPACES\app\src\main\AndroidManifest.xml:63:13-60
 activity#com.myapplication.office_spaces.activities.ForgotPassword
-ADDED from D:\GITHUBCORRECTION\OFFICE_SPACES\app\src\main\AndroidManifest.xml:65:9-67:40
+ADDED from D:\SpcaeHub Project\SpaceHub-AI-Powered-Rental-Management-System\OFFICE_SPACES\app\src\main\AndroidManifest.xml:65:9-67:40
 	android:exported
-		ADDED from D:\GITHUBCORRECTION\OFFICE_SPACES\app\src\main\AndroidManifest.xml:67:13-37
+		ADDED from D:\SpcaeHub Project\SpaceHub-AI-Powered-Rental-Management-System\OFFICE_SPACES\app\src\main\AndroidManifest.xml:67:13-37
 	android:name
-		ADDED from D:\GITHUBCORRECTION\OFFICE_SPACES\app\src\main\AndroidManifest.xml:66:13-54
+		ADDED from D:\SpcaeHub Project\SpaceHub-AI-Powered-Rental-Management-System\OFFICE_SPACES\app\src\main\AndroidManifest.xml:66:13-54
 activity#com.myapplication.office_spaces.activities.RenterMainActivity
-ADDED from D:\GITHUBCORRECTION\OFFICE_SPACES\app\src\main\AndroidManifest.xml:68:9-70:40
+ADDED from D:\SpcaeHub Project\SpaceHub-AI-Powered-Rental-Management-System\OFFICE_SPACES\app\src\main\AndroidManifest.xml:68:9-70:40
 	android:exported
-		ADDED from D:\GITHUBCORRECTION\OFFICE_SPACES\app\src\main\AndroidManifest.xml:70:13-37
+		ADDED from D:\SpcaeHub Project\SpaceHub-AI-Powered-Rental-Management-System\OFFICE_SPACES\app\src\main\AndroidManifest.xml:70:13-37
 	android:name
-		ADDED from D:\GITHUBCORRECTION\OFFICE_SPACES\app\src\main\AndroidManifest.xml:69:13-58
+		ADDED from D:\SpcaeHub Project\SpaceHub-AI-Powered-Rental-Management-System\OFFICE_SPACES\app\src\main\AndroidManifest.xml:69:13-58
 activity#com.myapplication.office_spaces.activities.RoleSelectionActivity
-ADDED from D:\GITHUBCORRECTION\OFFICE_SPACES\app\src\main\AndroidManifest.xml:71:9-73:40
+ADDED from D:\SpcaeHub Project\SpaceHub-AI-Powered-Rental-Management-System\OFFICE_SPACES\app\src\main\AndroidManifest.xml:71:9-73:40
 	android:exported
-		ADDED from D:\GITHUBCORRECTION\OFFICE_SPACES\app\src\main\AndroidManifest.xml:73:13-37
+		ADDED from D:\SpcaeHub Project\SpaceHub-AI-Powered-Rental-Management-System\OFFICE_SPACES\app\src\main\AndroidManifest.xml:73:13-37
 	android:name
-		ADDED from D:\GITHUBCORRECTION\OFFICE_SPACES\app\src\main\AndroidManifest.xml:72:13-61
+		ADDED from D:\SpcaeHub Project\SpaceHub-AI-Powered-Rental-Management-System\OFFICE_SPACES\app\src\main\AndroidManifest.xml:72:13-61
 activity#com.myapplication.office_spaces.activities.RegisterActivity
-ADDED from D:\GITHUBCORRECTION\OFFICE_SPACES\app\src\main\AndroidManifest.xml:74:9-76:40
+ADDED from D:\SpcaeHub Project\SpaceHub-AI-Powered-Rental-Management-System\OFFICE_SPACES\app\src\main\AndroidManifest.xml:74:9-76:40
 	android:exported
-		ADDED from D:\GITHUBCORRECTION\OFFICE_SPACES\app\src\main\AndroidManifest.xml:76:13-37
+		ADDED from D:\SpcaeHub Project\SpaceHub-AI-Powered-Rental-Management-System\OFFICE_SPACES\app\src\main\AndroidManifest.xml:76:13-37
 	android:name
-		ADDED from D:\GITHUBCORRECTION\OFFICE_SPACES\app\src\main\AndroidManifest.xml:75:13-56
+		ADDED from D:\SpcaeHub Project\SpaceHub-AI-Powered-Rental-Management-System\OFFICE_SPACES\app\src\main\AndroidManifest.xml:75:13-56
 activity#com.myapplication.office_spaces.activities.LoginActivity
-ADDED from D:\GITHUBCORRECTION\OFFICE_SPACES\app\src\main\AndroidManifest.xml:77:9-79:40
+ADDED from D:\SpcaeHub Project\SpaceHub-AI-Powered-Rental-Management-System\OFFICE_SPACES\app\src\main\AndroidManifest.xml:77:9-79:40
 	android:exported
-		ADDED from D:\GITHUBCORRECTION\OFFICE_SPACES\app\src\main\AndroidManifest.xml:79:13-37
+		ADDED from D:\SpcaeHub Project\SpaceHub-AI-Powered-Rental-Management-System\OFFICE_SPACES\app\src\main\AndroidManifest.xml:79:13-37
 	android:name
-		ADDED from D:\GITHUBCORRECTION\OFFICE_SPACES\app\src\main\AndroidManifest.xml:78:13-53
+		ADDED from D:\SpcaeHub Project\SpaceHub-AI-Powered-Rental-Management-System\OFFICE_SPACES\app\src\main\AndroidManifest.xml:78:13-53
 activity#com.myapplication.office_spaces.activities.SplashActivity
-ADDED from D:\GITHUBCORRECTION\OFFICE_SPACES\app\src\main\AndroidManifest.xml:80:9-88:20
+ADDED from D:\SpcaeHub Project\SpaceHub-AI-Powered-Rental-Management-System\OFFICE_SPACES\app\src\main\AndroidManifest.xml:80:9-88:20
 	android:exported
-		ADDED from D:\GITHUBCORRECTION\OFFICE_SPACES\app\src\main\AndroidManifest.xml:82:13-36
+		ADDED from D:\SpcaeHub Project\SpaceHub-AI-Powered-Rental-Management-System\OFFICE_SPACES\app\src\main\AndroidManifest.xml:82:13-36
 	android:name
-		ADDED from D:\GITHUBCORRECTION\OFFICE_SPACES\app\src\main\AndroidManifest.xml:81:13-54
+		ADDED from D:\SpcaeHub Project\SpaceHub-AI-Powered-Rental-Management-System\OFFICE_SPACES\app\src\main\AndroidManifest.xml:81:13-54
 intent-filter#action:name:android.intent.action.MAIN+category:name:android.intent.category.LAUNCHER
-ADDED from D:\GITHUBCORRECTION\OFFICE_SPACES\app\src\main\AndroidManifest.xml:83:13-87:29
+ADDED from D:\SpcaeHub Project\SpaceHub-AI-Powered-Rental-Management-System\OFFICE_SPACES\app\src\main\AndroidManifest.xml:83:13-87:29
 action#android.intent.action.MAIN
-ADDED from D:\GITHUBCORRECTION\OFFICE_SPACES\app\src\main\AndroidManifest.xml:84:17-69
+ADDED from D:\SpcaeHub Project\SpaceHub-AI-Powered-Rental-Management-System\OFFICE_SPACES\app\src\main\AndroidManifest.xml:84:17-69
 	android:name
-		ADDED from D:\GITHUBCORRECTION\OFFICE_SPACES\app\src\main\AndroidManifest.xml:84:25-66
+		ADDED from D:\SpcaeHub Project\SpaceHub-AI-Powered-Rental-Management-System\OFFICE_SPACES\app\src\main\AndroidManifest.xml:84:25-66
 category#android.intent.category.LAUNCHER
-ADDED from D:\GITHUBCORRECTION\OFFICE_SPACES\app\src\main\AndroidManifest.xml:86:17-77
+ADDED from D:\SpcaeHub Project\SpaceHub-AI-Powered-Rental-Management-System\OFFICE_SPACES\app\src\main\AndroidManifest.xml:86:17-77
 	android:name
-		ADDED from D:\GITHUBCORRECTION\OFFICE_SPACES\app\src\main\AndroidManifest.xml:86:27-74
+		ADDED from D:\SpcaeHub Project\SpaceHub-AI-Powered-Rental-Management-System\OFFICE_SPACES\app\src\main\AndroidManifest.xml:86:27-74
 uses-sdk
-INJECTED from D:\GITHUBCORRECTION\OFFICE_SPACES\app\src\main\AndroidManifest.xml reason: use-sdk injection requested
-INJECTED from D:\GITHUBCORRECTION\OFFICE_SPACES\app\src\main\AndroidManifest.xml
-INJECTED from D:\GITHUBCORRECTION\OFFICE_SPACES\app\src\main\AndroidManifest.xml
+INJECTED from D:\SpcaeHub Project\SpaceHub-AI-Powered-Rental-Management-System\OFFICE_SPACES\app\src\main\AndroidManifest.xml reason: use-sdk injection requested
+INJECTED from D:\SpcaeHub Project\SpaceHub-AI-Powered-Rental-Management-System\OFFICE_SPACES\app\src\main\AndroidManifest.xml
+INJECTED from D:\SpcaeHub Project\SpaceHub-AI-Powered-Rental-Management-System\OFFICE_SPACES\app\src\main\AndroidManifest.xml
 MERGED from [com.google.android.gms:play-services-location:21.4.0] C:\Users\Vedant\.gradle\caches\9.4.1\transforms\46d5c68d7e7b38b4e31398864510895e\transformed\play-services-location-21.4.0\AndroidManifest.xml:5:5-44
 MERGED from [com.google.android.gms:play-services-location:21.4.0] C:\Users\Vedant\.gradle\caches\9.4.1\transforms\46d5c68d7e7b38b4e31398864510895e\transformed\play-services-location-21.4.0\AndroidManifest.xml:5:5-44
 MERGED from [com.google.android.material:material:1.14.0] C:\Users\Vedant\.gradle\caches\9.4.1\transforms\2005ea027812ac6b78378c686a75c9f2\transformed\material-1.14.0\AndroidManifest.xml:20:5-44
@@ -591,9 +591,9 @@ MERGED from [androidx.compose.runtime:runtime-annotation-android:1.9.0] C:\Users
 MERGED from [com.razorpay:core:1.0.18] C:\Users\Vedant\.gradle\caches\9.4.1\transforms\f26d3d599e6ba703d88f7f2b67f074fd\transformed\core-1.0.18\AndroidManifest.xml:5:5-44
 MERGED from [com.razorpay:core:1.0.18] C:\Users\Vedant\.gradle\caches\9.4.1\transforms\f26d3d599e6ba703d88f7f2b67f074fd\transformed\core-1.0.18\AndroidManifest.xml:5:5-44
 	android:targetSdkVersion
-		INJECTED from D:\GITHUBCORRECTION\OFFICE_SPACES\app\src\main\AndroidManifest.xml
+		INJECTED from D:\SpcaeHub Project\SpaceHub-AI-Powered-Rental-Management-System\OFFICE_SPACES\app\src\main\AndroidManifest.xml
 	android:minSdkVersion
-		INJECTED from D:\GITHUBCORRECTION\OFFICE_SPACES\app\src\main\AndroidManifest.xml
+		INJECTED from D:\SpcaeHub Project\SpaceHub-AI-Powered-Rental-Management-System\OFFICE_SPACES\app\src\main\AndroidManifest.xml
 uses-permission#android.permission.NFC
 ADDED from [com.razorpay:standard-core:1.7.18] C:\Users\Vedant\.gradle\caches\9.4.1\transforms\d608b340cb571c0b4f3707c03cf2afae\transformed\standard-core-1.7.18\AndroidManifest.xml:9:5-62
 	android:name
